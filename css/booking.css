@@ -1,0 +1,390 @@
+/* ================================================================
+   FIRST CAB — SMART BOOKING WIDGET  (booking.css)
+   Self-contained styles for the dynamic smart booking form.
+   Uses --fcb- prefix to avoid collisions.
+   ================================================================ */
+
+/* ── Container ── */
+.fcb {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(8, 8, 8, 0.84);
+  border: 1px solid rgba(245, 180, 0, 0.22);
+  border-radius: 22px;
+  backdrop-filter: blur(30px) saturate(1.4);
+  -webkit-backdrop-filter: blur(30px) saturate(1.4);
+  padding: clamp(18px, 3vw, 30px);
+  box-shadow:
+    0 48px 100px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  animation: fcb-appear 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.0s forwards;
+}
+@keyframes fcb-appear {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── Service Type Tab Row ── */
+.fcb-svc-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 5px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+.fcb-svc-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 6px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.38);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  min-height: 52px;
+  line-height: 1.3;
+}
+.fcb-svc-tab .fcb-tab-icon {
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 1px;
+}
+.fcb-svc-tab:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.65);
+}
+.fcb-svc-tab.active {
+  background: var(--gold, #F5B400);
+  color: #000;
+  box-shadow: 0 4px 18px rgba(245, 180, 0, 0.35);
+}
+.fcb-svc-tab:focus-visible {
+  outline: 2px solid var(--gold, #F5B400);
+  outline-offset: 2px;
+}
+
+/* ── Trip Type Sub-tabs (Airport / Outstation) ── */
+.fcb-trip-toggle {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.fcb-trip-btn {
+  flex: 1;
+  padding: 9px 10px;
+  border: 1px solid rgba(245, 180, 0, 0.22);
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  min-height: 40px;
+}
+.fcb-trip-btn:hover { border-color: rgba(245, 180, 0, 0.5); color: rgba(255,255,255,0.7); }
+.fcb-trip-btn.active {
+  background: rgba(245, 180, 0, 0.14);
+  border-color: var(--gold, #F5B400);
+  color: var(--gold, #F5B400);
+}
+
+/* ── Form grid / rows ── */
+.fcb-fields   { display: flex; flex-direction: column; gap: 10px; }
+.fcb-row      { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fcb-row-3    { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.fcb-row-full { grid-template-columns: 1fr; }
+
+/* ── Individual field ── */
+.fcb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.fcb-field label {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+}
+.fcb-field label .fcb-req {
+  color: var(--gold, #F5B400);
+  font-size: 11px;
+  line-height: 1;
+}
+.fcb-field label .fcb-opt {
+  font-size: 9px;
+  color: rgba(255,255,255,0.22);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 2px;
+}
+
+/* ── Inputs / Selects / Textarea ── */
+.fcb-input,
+.fcb-select,
+.fcb-textarea {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+  width: 100%;
+  min-height: 48px;
+}
+.fcb-input::placeholder,
+.fcb-textarea::placeholder { color: rgba(255, 255, 255, 0.22); }
+.fcb-input:focus,
+.fcb-select:focus,
+.fcb-textarea:focus {
+  border-color: var(--gold, #F5B400);
+  background: rgba(245, 180, 0, 0.07);
+  box-shadow: 0 0 0 3px rgba(245, 180, 0, 0.14);
+}
+/* Date/time dark mode */
+.fcb-input[type="date"],
+.fcb-input[type="time"] { color-scheme: dark; }
+
+.fcb-textarea {
+  resize: vertical;
+  min-height: 76px;
+  line-height: 1.55;
+  padding: 11px 14px;
+}
+
+/* Select wrapper */
+.fcb-sel-wrap {
+  position: relative;
+}
+.fcb-sel-wrap .fcb-select { padding-right: 36px; cursor: pointer; }
+.fcb-sel-wrap::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 13px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold, #F5B400);
+  font-size: 10px;
+  pointer-events: none;
+  transition: transform 0.18s;
+}
+.fcb-sel-wrap:focus-within::after { transform: translateY(-50%) rotate(180deg); }
+.fcb-select option { background: #111; color: #fff; }
+
+/* ── Validation error ── */
+.fcb-input.fcb-err,
+.fcb-select.fcb-err,
+.fcb-textarea.fcb-err {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.07) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.14) !important;
+}
+.fcb-err-msg {
+  display: none;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #f87171;
+  margin-top: 2px;
+}
+.fcb-err-msg.visible { display: block; }
+
+/* ── Info note ── */
+.fcb-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 13px;
+  background: rgba(245, 180, 0, 0.08);
+  border: 1px solid rgba(245, 180, 0, 0.2);
+  border-radius: 9px;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.55;
+  margin-top: 2px;
+}
+.fcb-note i { color: var(--gold, #F5B400); font-size: 12px; margin-top: 1px; flex-shrink: 0; }
+
+/* ── Passenger / Luggage button pickers ── */
+.fcb-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.fcb-pick-btn {
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 38px;
+  min-width: 44px;
+  transition: all 0.15s;
+}
+.fcb-pick-btn:hover { border-color: rgba(245,180,0,0.45); color: rgba(255,255,255,0.8); }
+.fcb-pick-btn.active {
+  background: rgba(245, 180, 0, 0.16);
+  border-color: var(--gold, #F5B400);
+  color: var(--gold, #F5B400);
+}
+.fcb-picker-hint {
+  width: 100%;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.25);
+  margin-top: 2px;
+}
+
+/* Custom pax input (shown when "Custom" is picked) */
+.fcb-custom-pax {
+  display: none;
+  margin-top: 6px;
+}
+.fcb-custom-pax.visible { display: block; }
+
+/* ── Section divider ── */
+.fcb-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin: 4px 0 2px;
+}
+
+/* ── Conditional field groups (fade/slide in) ── */
+.fcb-cond {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 0.36s ease, opacity 0.28s ease, transform 0.28s ease;
+  pointer-events: none;
+}
+.fcb-cond.visible {
+  max-height: 700px;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+/* ── Char counter ── */
+.fcb-char-count {
+  text-align: right;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.22);
+  margin-top: 2px;
+}
+
+/* ── Submit button ── */
+.fcb-submit {
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--gold, #F5B400);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  min-height: 54px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.15s;
+  margin-top: 4px;
+}
+.fcb-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(245, 180, 0, 0.4);
+}
+.fcb-submit:disabled { opacity: 0.72; cursor: not-allowed; transform: none !important; }
+
+/* Button inner states */
+.fcb-btn-normal,
+.fcb-btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.22s, transform 0.22s;
+}
+.fcb-btn-loading {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.88);
+  pointer-events: none;
+}
+.fcb-submit.loading .fcb-btn-normal  { opacity: 0; transform: scale(0.88); }
+.fcb-submit.loading .fcb-btn-loading { opacity: 1; transform: none; }
+
+/* Spinner */
+.fcb-spinner {
+  display: inline-block;
+  width: 17px; height: 17px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(0, 0, 0, 0.22);
+  border-top-color: #000;
+  animation: fcb-spin 0.7s linear infinite;
+}
+@keyframes fcb-spin { to { transform: rotate(360deg); } }
+
+/* ── Section panel transitions ── */
+.fcb-panel { display: none; }
+.fcb-panel.active { display: flex; flex-direction: column; gap: 10px; }
+
+/* ── Section header label ── */
+.fcb-section-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: var(--gold, #F5B400);
+  margin-bottom: 4px;
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 767px) {
+  .fcb-svc-tabs  { grid-template-columns: repeat(2, 1fr); }
+  .fcb-svc-tab   { font-size: 10px; padding: 9px 6px; min-height: 48px; }
+  .fcb-svc-tab .fcb-tab-icon { font-size: 16px; }
+  .fcb-row, .fcb-row-3 { grid-template-columns: 1fr; }
+  .fcb-trip-toggle { flex-direction: column; gap: 5px; }
+  .fcb-input,
+  .fcb-select,
+  .fcb-textarea  { font-size: 16px; /* prevent iOS auto-zoom */ min-height: 52px; }
+  .fcb-submit    { min-height: 56px; font-size: 15px; }
+  .fcb           { padding: 14px; border-radius: 16px; }
+}
+
+@media (max-width: 420px) {
+  .fcb-svc-tabs { grid-template-columns: repeat(2, 1fr); gap: 4px; }
+  .fcb-pick-btn { font-size: 12px; padding: 7px 11px; }
+}
