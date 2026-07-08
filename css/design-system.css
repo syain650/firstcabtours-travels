@@ -3579,3 +3579,269 @@ body.fc-is-offline #fc-global-offline-screen {
 .fc-locate-btn:hover { background: var(--gold); color: var(--black); }
 .fc-locate-btn.loading i { animation: fc-spin 1s linear infinite; }
 @keyframes fc-spin { 100% { transform: rotate(360deg); } }
+
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE VIEWPORT & DPR FIXES
+   ══════════════════════════════════════════════════════════ */
+
+/* Fix 2 - Vehicle Card Image Ratio */
+.fleet-img, .fc-fleet-img, .vehicle-card-img, .card-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: #f5f5f5;
+}
+
+.fleet-img img, .fc-fleet-img img, .vehicle-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.fleet-img img[src*="crysta"], .fc-fleet-img img[src*="crysta"],
+.fleet-img img[src*="innova"], .fc-fleet-img img[src*="innova"] {
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+  background: #f8f8f8;
+}
+
+/* Fix 3 - Vehicle Card Sizing */
+.fc-fleet-card, .vehicle-card, .fleet-card, .fc-carousel-slide {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  height: auto !important;
+}
+
+.fc-fleet-info, .fleet-info, .vehicle-info, .fc-carousel-body {
+  padding: clamp(16px, 4vw, 28px);
+}
+
+/* Fix 4 - Font Sizes (Clamp) */
+.fleet-card h3, .fc-fleet-card h3, .vehicle-name, .fc-carousel-title {
+  font-size: clamp(18px, 4.5vw, 24px);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.fleet-card p, .fc-fleet-card p, .vehicle-desc, .fc-carousel-desc {
+  font-size: clamp(13px, 3.5vw, 16px);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.fleet-spec, .fc-fleet-spec, .fc-ps-perk {
+  font-size: clamp(12px, 3vw, 14px);
+}
+
+.fc-price-amount, .price-value {
+  font-size: clamp(28px, 7vw, 42px);
+  font-weight: 800;
+}
+
+.fc-price-label, .price-label {
+  font-size: clamp(12px, 3vw, 14px);
+}
+
+/* Fix 5 - Book Button */
+.fc-book-btn, .book-btn, button[class*="book"], .fc-carousel-cta {
+  width: 100%;
+  padding: clamp(14px, 3.5vw, 18px) clamp(20px, 5vw, 32px);
+  font-size: clamp(15px, 4vw, 18px);
+  font-weight: 800;
+  border-radius: 50px;
+  background: #F5B400;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  margin-top: 16px;
+  display: block;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fc-book-btn:active, .fc-carousel-cta:active {
+  transform: scale(0.97);
+}
+
+/* Fix 6 - Pricing Cards */
+.fc-price-tier, .price-tier-card, .pricing-box {
+  width: 100%;
+  padding: clamp(16px, 4vw, 24px);
+  border-radius: 16px;
+  background: #f5f5f5;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.fc-price-tier-label {
+  font-size: clamp(12px, 3vw, 14px);
+  color: rgba(0,0,0,0.55);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.fc-price-tier-price {
+  font-size: clamp(30px, 8vw, 44px);
+  font-weight: 800;
+  color: #0A0A0A;
+  display: block;
+  line-height: 1.1;
+}
+
+.fc-price-tier-km {
+  font-size: clamp(12px, 3vw, 14px);
+  color: rgba(0,0,0,0.5);
+  margin-top: 4px;
+  display: block;
+}
+
+/* Fix 7 - Carousel Card Width */
+.carousel-wrapper, .fc-carousel, .fleet-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .carousel-card, .fc-carousel-card, .fc-carousel-slide {
+    width: calc(100vw - 32px);
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+.carousel-track, .fc-carousel-track, .fc-carousel-track-wrap {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
+}
+
+/* Fix 8 - Filter Pills */
+.fc-filter-wrap, .filter-pills, .fc-fleet-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0 16px;
+  margin-bottom: 24px;
+}
+
+.fc-filter-btn, .filter-pill, .fc-fleet-tab {
+  padding: clamp(8px, 2vw, 10px) clamp(14px, 3.5vw, 20px) !important;
+  border-radius: 50px !important;
+  font-size: clamp(12px, 3vw, 14px) !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  min-height: 38px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Fix 9 - Bottom Nav Spacing */
+main, .page-content, body > .content-wrap {
+  padding-bottom: calc(70px + env(safe-area-inset-bottom));
+}
+
+.fc-bottom-nav, .bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 70px;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 1000;
+  background: #0A0A0A;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.fc-bottom-nav a, .bottom-nav a {
+  font-size: clamp(10px, 2.5vw, 13px);
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* Fix 10 - Image Quality */
+img {
+  image-rendering: auto;
+  -webkit-optimize-contrast: auto;
+}
+
+/* ── Formspree Form Styles ── */
+.field-error,
+[data-fs-error]:not([data-fs-error=""]) {
+  display: block;
+  color: #991b1b;
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 16px;
+  text-align: left;
+}
+
+.form-input[aria-invalid="true"],
+.form-select[aria-invalid="true"],
+.form-textarea[aria-invalid="true"],
+.fc-form-input[aria-invalid="true"] {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.12);
+  background: #fff5f5;
+}
+
+[data-fs-success] {
+  display: none;
+  padding: 16px 20px;
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+[data-fs-error]:not([data-fs-error]) {
+  display: none;
+  padding: 14px 18px;
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+[data-fs-submit-btn]:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.form-offline-notice {
+  display: none;
+  padding: 14px 18px;
+  background: rgba(245,180,0,0.1);
+  border: 1px dashed rgba(245,180,0,0.5);
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0A0A0A;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.form-offline-notice.show { display: block; }

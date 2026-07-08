@@ -3,7 +3,17 @@
 <head>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com https://wa.me; frame-src 'self' https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:;">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">\n  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' 'unsafe-inline' 'unsafe-eval'
+    https://fonts.googleapis.com https://fonts.gstatic.com
+    https://wa.me https://unpkg.com;
+    script-src 'self' 'unsafe-inline' https://unpkg.com;
+    connect-src 'self' https://formspree.io
+                https://nominatim.openstreetmap.org;
+    font-src 'self' data: https://fonts.gstatic.com;
+    img-src 'self' data: https: blob:;
+    frame-src 'self' https://www.google.com
+              https://maps.googleapis.com https://maps.gstatic.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="description" content="Contact FIRST CAB Chennai — call, WhatsApp or send a message. We're available 24/7 for bookings and enquiries. +91 98849 57791.">
   <meta name="theme-color" content="#F5B400">
@@ -125,59 +135,96 @@
       <div class="fc-form-card reveal-right">
         <h3>Send Us a Message</h3>
 
-        <form id="fc-contact-form"
-              action="https://formspree.io/f/xqeyyppl"
-              method="POST"
-              novalidate
-              aria-label="Contact form">
+        <!-- Success message — outside form tag -->
+        <div data-fs-success class="form-message success" style="display:none">
+          ✅ Thank you! Your message has been sent. We'll call you within 30 minutes.
+        </div>
 
-          <!-- Honeypot (spam protection) -->
+        <div class="form-offline-notice" id="offlineNotice">
+          📵 You're offline. Please call or WhatsApp us directly.
+          <br>
+          <a href="tel:+919884957791" style="color:#0A0A0A;font-weight:700;">
+            📞 +91 98849 57791
+          </a>
+        </div>
+
+        <form id="contactForm" action="https://formspree.io/f/xqeyyppl" method="POST" novalidate>
+
+          <!-- Spam protection -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_subject" value="New Booking Inquiry — FIRST CAB Website">
-          <input type="hidden" name="_replyto" value="email">
+          <input type="hidden" name="_subject" value="New Booking Enquiry — FIRST CAB">
 
-          <div class="fc-form-row">
-            <div class="fc-form-group">
-              <label for="fc-name">Full Name <span aria-hidden="true" style="color:var(--gold)">*</span></label>
-              <input type="text" id="fc-name" name="name" class="fc-form-input" placeholder="Your full name" required autocomplete="name" aria-required="true">
-            </div>
-            <div class="fc-form-group">
-              <label for="fc-email">Email Address <span aria-hidden="true" style="color:var(--gold)">*</span></label>
-              <input type="email" id="fc-email" name="email" class="fc-form-input" placeholder="you@example.com" required autocomplete="email" aria-required="true">
-            </div>
+          <!-- Full Name -->
+          <div class="fc-form-group" style="margin-bottom: 16px;">
+            <label class="form-label" for="fullName">
+              Full Name <span class="req" style="color:var(--gold)">*</span>
+            </label>
+            <input type="text" id="fullName" name="name"
+                   class="fc-form-input" placeholder="Your full name"
+                   autocomplete="name" data-fs-field required>
+            <span data-fs-error="name" class="field-error"></span>
           </div>
 
-          <div class="fc-form-row">
-            <div class="fc-form-group">
-              <label for="fc-phone">Phone Number <span aria-hidden="true" style="color:var(--gold)">*</span></label>
-              <input type="tel" id="fc-phone" name="phone" class="fc-form-input" placeholder="+91 98765 43210" required autocomplete="tel" aria-required="true">
-            </div>
-            <div class="fc-form-group">
-              <label for="fc-service">Service Required <span aria-hidden="true" style="color:var(--gold)">*</span></label>
-              <select id="fc-service" name="service" class="fc-form-select" required aria-required="true">
-                <option value="" disabled selected>Select a service…</option>
-                <option value="Airport Transfer">Airport Transfer</option>
-                <option value="City Ride">City Ride</option>
-                <option value="Hourly Package">Hourly Package</option>
-                <option value="Outstation Trip">Outstation Trip</option>
-                <option value="Corporate Travel">Corporate Travel</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
+          <!-- Email -->
+          <div class="fc-form-group" style="margin-bottom: 16px;">
+            <label class="form-label" for="emailAddr">
+              Email Address <span class="req" style="color:var(--gold)">*</span>
+            </label>
+            <input type="email" id="emailAddr" name="email"
+                   class="fc-form-input" placeholder="you@example.com"
+                   autocomplete="email" data-fs-field required>
+            <span data-fs-error="email" class="field-error"></span>
           </div>
 
-          <div class="fc-form-group">
-            <label for="fc-message">Your Message <span aria-hidden="true" style="color:var(--gold)">*</span></label>
-            <textarea id="fc-message" name="message" class="fc-form-textarea" rows="5"
-              placeholder="Please include: Pickup location, Drop location, Date &amp; Time, Number of passengers…"
-              required aria-required="true"></textarea>
+          <!-- Phone -->
+          <div class="fc-form-group" style="margin-bottom: 16px;">
+            <label class="form-label" for="phoneNum">
+              Phone Number <span class="req" style="color:var(--gold)">*</span>
+            </label>
+            <input type="tel" id="phoneNum" name="phone"
+                   class="fc-form-input" placeholder="+91 98849 57791"
+                   autocomplete="tel" data-fs-field required>
+            <span data-fs-error="phone" class="field-error"></span>
           </div>
 
-          <button type="submit" id="fc-form-submit" class="btn btn-primary btn-block btn-lg" aria-label="Submit contact form">
-            <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+          <!-- Service -->
+          <div class="fc-form-group" style="margin-bottom: 16px;">
+            <label class="form-label" for="serviceReq">
+              Service Required <span class="req" style="color:var(--gold)">*</span>
+            </label>
+            <select id="serviceReq" name="service"
+                    class="fc-form-select" data-fs-field required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="Airport Transfer">✈️ Airport Transfer</option>
+              <option value="City Ride">🏙️ City Ride</option>
+              <option value="Outstation Trip">🗺️ Outstation Trip</option>
+              <option value="4 Hour Package">⏱️ 4 Hour Package</option>
+              <option value="8 Hour Package">⏱️ 8 Hour Package</option>
+              <option value="Corporate Travel">💼 Corporate Travel</option>
+            </select>
+            <span data-fs-error="service" class="field-error"></span>
+          </div>
+
+          <!-- Message -->
+          <div class="fc-form-group" style="margin-bottom: 16px;">
+            <label class="form-label" for="userMsg">
+              Your Message <span class="req" style="color:var(--gold)">*</span>
+            </label>
+            <textarea id="userMsg" name="message"
+                      class="fc-form-textarea" data-fs-field required rows="5"
+                      placeholder="Please include: Pickup location, Drop location, Date & Time, Number of passengers..."></textarea>
+            <span data-fs-error="message" class="field-error"></span>
+          </div>
+
+          <!-- Form-level error -->
+          <div data-fs-error class="form-message error" style="display:none"></div>
+
+          <!-- Submit -->
+          <button type="submit" data-fs-submit-btn
+                  class="btn btn-primary btn-block btn-lg" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
           </button>
 
-          <div id="fc-form-msg" class="fc-form-msg" role="alert" aria-live="polite"></div>
         </form>
 
         <!-- Quick actions below form -->
@@ -319,5 +366,47 @@
 
 <script src="js/core.js" defer></script>
   <script src="js/connectivity.js"></script>
+
+  <!-- Step 1: Init formspree before the library loads -->
+  <script>
+    window.formspree = window.formspree ||
+      function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', {
+      formElement: '#contactForm',
+      formId: 'xqeyyppl'
+    });
+  </script>
+
+  <!-- Step 2: Load the @formspree/ajax library from CDN -->
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+  <!-- Step 3: Offline detection + extra UX -->
+  <script>
+  (function () {
+    const submitBtn   = document.getElementById('submitBtn');
+    const offlineNote = document.getElementById('offlineNotice');
+
+    /* Offline detection */
+    function handleConnectivity() {
+      const offline = !navigator.onLine;
+      if (offlineNote) offlineNote.classList.toggle('show', offline);
+      if (submitBtn)   submitBtn.disabled = offline;
+    }
+    handleConnectivity();
+    window.addEventListener('online',  handleConnectivity);
+    window.addEventListener('offline', handleConnectivity);
+
+    /* Loading spinner on submit (visual feedback) */
+    const form = document.getElementById('contactForm');
+    if (form && submitBtn) {
+      form.addEventListener('submit', function () {
+        if (navigator.onLine) {
+          submitBtn.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        }
+      });
+    }
+  })();
+  </script>
 </body>
 </html>
