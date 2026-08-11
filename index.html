@@ -1,793 +1,993 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com https://wa.me; frame-src 'self' https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:;">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com https://wa.me; frame-src 'self' https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:;">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta name="description" content="FIRST CAB — Chennai's premier cab service. Airport transfers, city rides & outstation trips. Professional drivers, AC vehicles, 24/7. Call +91 98849 57791.">
-  <meta name="keywords" content="cab Chennai, taxi Chennai, airport taxi Chennai, outstation cab Chennai, FIRST CAB">
+  <title>FirstCab | Cab Rental & Corporate Transport Services in Chennai</title>
+  <meta name="description"
+    content="FirstCab offers reliable cab rental, corporate employee transportation, airport transfers, outstation cabs and travel services in Chennai.">
+  <meta name="keywords"
+    content="cab rental in Chennai, car rental in Chennai, cab service in Chennai, taxi service in Chennai, corporate cab service in Chennai, corporate transportation Chennai, employee transportation Chennai, airport cab service Chennai, FirstCab">
+  <link rel="canonical" href="https://firstcab.co.in/">
   <meta name="theme-color" content="#F5B400">
-  <meta property="og:title" content="FIRST CAB | Premium Cab Services in Chennai">
-  <meta property="og:description" content="Professional airport transfers, city rides & outstation trips. Verified drivers, AC vehicles, 24/7 service.">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <title>FIRST CAB | Premium Cab Services in Chennai</title>
+  <meta property="og:url" content="https://firstcab.co.in/">
+  <meta property="og:title" content="FirstCab | Cab Rental & Corporate Transport Services in Chennai">
+  <meta property="og:description"
+    content="FirstCab offers reliable cab rental, corporate employee transportation, airport transfers, outstation cabs and travel services in Chennai.">
+  <meta property="og:image" content="https://firstcab.co.in/firstcab-logo-new.png">
+  <meta property="og:site_name" content="FirstCab">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://firstcab.co.in/">
+  <meta name="twitter:title" content="FirstCab | Cab Rental & Corporate Transport Services in Chennai">
+  <meta name="twitter:description"
+    content="FirstCab offers reliable cab rental, corporate employee transportation, airport transfers, outstation cabs and travel services in Chennai.">
+  <meta name="twitter:image" content="https://firstcab.co.in/firstcab-logo-new.png">
+
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/booking.css">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://firstcab.co.in/#organization",
+        "name": "FirstCab",
+        "url": "https://firstcab.co.in",
+        "logo": "https://firstcab.co.in/firstcab-logo-new.png",
+        "email": "firstcabservice@gmail.com",
+        "telephone": "+919884957791",
+        "sameAs": [
+          "https://wa.me/919884957791"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://firstcab.co.in/#website",
+        "url": "https://firstcab.co.in",
+        "name": "FirstCab",
+        "publisher": {
+          "@id": "https://firstcab.co.in/#organization"
+        },
+        "description": "FirstCab offers reliable cab rental, corporate employee transportation, airport transfers, outstation cabs and travel services in Chennai."
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://firstcab.co.in/#localbusiness",
+        "name": "FirstCab",
+        "image": "https://firstcab.co.in/firstcab-logo-new.png",
+        "url": "https://firstcab.co.in",
+        "telephone": "+919884957791",
+        "email": "firstcabservice@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "SAF Games Village, Koyambedu",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "600040",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "13.0674",
+          "longitude": "80.1878"
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Chennai"},
+          {"@type": "AdministrativeArea", "name": "Ambattur"},
+          {"@type": "AdministrativeArea", "name": "Avadi"},
+          {"@type": "AdministrativeArea", "name": "Guindy"},
+          {"@type": "AdministrativeArea", "name": "Porur"},
+          {"@type": "AdministrativeArea", "name": "Sriperumbudur"},
+          {"@type": "AdministrativeArea", "name": "Oragadam"},
+          {"@type": "AdministrativeArea", "name": "Gummidipoondi"},
+          {"@type": "AdministrativeArea", "name": "Tambaram"},
+          {"@type": "AdministrativeArea", "name": "Sholinganallur"},
+          {"@type": "AdministrativeArea", "name": "OMR"},
+          {"@type": "AdministrativeArea", "name": "GST Road"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
-<!-- Skip link -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ═══════════════ NAVBAR ═══════════════ -->
-<header class="fc-nav" id="fc-nav" role="banner">
-  <a href="index.html" class="fc-logo" aria-label="FIRST CAB — Home">
-    <div class="fc-logo-icon" aria-hidden="true">FC</div>
-    <span class="fc-logo-name">FIRST<span>CAB</span></span>
-  </a>
-  <ul class="fc-nav-links" id="fc-nav-links" role="navigation" aria-label="Primary navigation">
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <header class="fc-nav" id="fc-nav" role="banner">
+    <a href="index.html" class="fc-logo" aria-label="FIRST CAB — Home">
+      <img src="firstcab-logo-new.png" alt="FIRST CAB Logo" class="fc-logo-img">
+    </a>
+    <ul class="fc-nav-links" id="fc-nav-links" role="navigation" aria-label="Primary navigation">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="tel:+919884957791" class="fc-nav-cta" aria-label="Call FIRST CAB">
+      <i class="fas fa-phone" aria-hidden="true"></i> +91 98849 57791
+    </a>
+    <button class="fc-hamburger" id="fc-hamburger" aria-label="Toggle navigation" aria-expanded="false"
+      aria-controls="fc-mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="fc-mobile-nav-overlay" id="fc-nav-overlay"></div>
+
+  <!-- Mobile nav -->
+  <ul class="fc-mobile-nav" id="fc-mobile-nav" role="navigation" aria-label="Mobile navigation">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="tel:+919884957791" class="mob-nav-call"><i class="fas fa-phone" aria-hidden="true"></i> +91 98849
+        57791</a></li>
   </ul>
-  <a href="tel:+919884957791" class="fc-nav-cta" aria-label="Call FIRST CAB">
-    <i class="fas fa-phone" aria-hidden="true"></i> +91 98849 57791
-  </a>
-  <button class="fc-hamburger" id="fc-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="fc-mobile-nav">
-    <span></span><span></span><span></span>
-  </button>
-</header>
 
-<!-- Mobile Nav Overlay -->
-<div class="fc-mobile-nav-overlay" id="fc-nav-overlay"></div>
+  <main id="main-content">
 
-<!-- Mobile nav -->
-<ul class="fc-mobile-nav" id="fc-mobile-nav" role="navigation" aria-label="Mobile navigation">
-  <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="services.html">Services</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="tel:+919884957791" class="mob-nav-call"><i class="fas fa-phone" aria-hidden="true"></i> +91 98849 57791</a></li>
-</ul>
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="fc-hero" aria-label="Hero section">
+      <div class="fc-hero-bg" role="img" aria-label="FIRST CAB premium taxi service"></div>
+      <div class="fc-hero-overlay" aria-hidden="true"></div>
+      <div class="fc-hero-grid" aria-hidden="true"></div>
+      <div class="fc-aurora" aria-hidden="true">
 
-<main id="main-content">
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="fc-hero" aria-label="Hero section">
-  <div class="fc-hero-bg" role="img" aria-label="FIRST CAB premium taxi service"></div>
-  <div class="fc-hero-overlay" aria-hidden="true"></div>
-  <div class="fc-hero-grid" aria-hidden="true"></div>
-  <div class="fc-aurora" aria-hidden="true">
-    
-    
-    
-  </div>
-  <div class="fc-particles" id="fc-particles" aria-hidden="true"></div>
 
-  <div class="fc-hero-inner container">
-    <div class="fc-hero-tag" role="text">
-      <div class="fc-hero-tag-dot" aria-hidden="true"></div>
-      Premium · Chennai · Since 2004
-      <div class="fc-hero-tag-dot" aria-hidden="true"></div>
-    </div>
+      </div>
+      <div class="fc-particles" id="fc-particles" aria-hidden="true"></div>
 
-    <h1 class="fc-hero-h1">
-      Your Journey,<br>
-      <span class="grad-text">Our Priority</span>
-    </h1>
+      <div class="fc-hero-inner container">
+        <div class="fc-hero-tag" role="text">
+          <div class="fc-hero-tag-dot" aria-hidden="true"></div>
+          Premium · Chennai · Since 2004
+          <div class="fc-hero-tag-dot" aria-hidden="true"></div>
+        </div>
 
-    <p class="fc-hero-sub">
-      Experience professional transportation with background-verified drivers and well-maintained AC vehicles.
-      Airport transfers, city rides &amp; outstation trips — available around the clock.
-    </p>
+        <h1 class="fc-hero-h1">
+          Reliable Cab &amp; Corporate<br>
+          <span class="grad-text">Transportation Services in Chennai</span>
+        </h1>
 
-    <div class="fc-hero-ctas">
-      <a href="tel:+919884957791" class="btn btn-primary btn-lg" aria-label="Call FIRST CAB to book">
-        <i class="fas fa-phone" aria-hidden="true"></i> Book a Ride — Call Now
-      </a>
-      <a href="services.html" class="btn btn-ghost btn-lg">
-        <i class="fas fa-car" aria-hidden="true"></i> View Services
-      </a>
-    </div>
+        <p class="fc-hero-sub">
+          Experience professional transportation with background-verified drivers and well-maintained AC vehicles.
+          Airport transfers, city rides &amp; outstation trips — available around the clock.
+        </p>
 
-    <!-- ═══ SMART BOOKING WIDGET ═══ -->
-    <div class="fcb" id="fcb-root" role="region" aria-label="Book your cab online">
+        <div class="fc-hero-ctas">
+          <a href="tel:+919884957791" class="btn btn-primary btn-lg" aria-label="Call FIRST CAB to book">
+            <i class="fas fa-phone" aria-hidden="true"></i> Book a Ride — Call Now
+          </a>
+          <a href="services.html" class="btn btn-ghost btn-lg">
+            <i class="fas fa-car" aria-hidden="true"></i> View Services
+          </a>
+        </div>
 
-      <!-- Service type tabs -->
-      <div class="fcb-svc-tabs" role="tablist" aria-label="Select service type">
-        <button class="fcb-svc-tab active" role="tab" aria-selected="true" data-svc="airport">
-          <span class="fcb-tab-icon" aria-hidden="true">✈️</span>Airport
-        </button>
-        <button class="fcb-svc-tab" role="tab" aria-selected="false" data-svc="railway">
-          <span class="fcb-tab-icon" aria-hidden="true">🚆</span>Railway
-        </button>
-        <button class="fcb-svc-tab" role="tab" aria-selected="false" data-svc="city">
-          <span class="fcb-tab-icon" aria-hidden="true">🚖</span>City Ride
-        </button>
-        <button class="fcb-svc-tab" role="tab" aria-selected="false" data-svc="outstation">
-          <span class="fcb-tab-icon" aria-hidden="true">🛣️</span>Outstation
-        </button>
+        <!-- ═══ SMART BOOKING WIDGET ═══ -->
+        <div class="fcb" id="fcb-root" role="region" aria-label="Book your cab online">
+
+          <!-- Service type tabs -->
+          <div class="fcb-svc-tabs" role="tablist" aria-label="Select service type">
+            <button class="fcb-svc-tab active" role="tab" aria-selected="true" data-svc="airport">
+              <span class="fcb-tab-icon" aria-hidden="true">✈️</span>Airport
+            </button>
+            <button class="fcb-svc-tab" role="tab" aria-selected="false" data-svc="railway">
+              <span class="fcb-tab-icon" aria-hidden="true">🚆</span>Railway
+            </button>
+            <button class="fcb-svc-tab" role="tab" aria-selected="false" data-svc="city">
+              <span class="fcb-tab-icon" aria-hidden="true">🚖</span>City Ride
+            </button>
+            <button class="fcb-svc-tab" role="tab" aria-selected="false" data-svc="outstation">
+              <span class="fcb-tab-icon" aria-hidden="true">🛣️</span>Outstation
+            </button>
+          </div>
+
+          <!-- Dynamic form panels (built by booking.js) -->
+          <div class="fcb-panels"></div>
+
+          <!-- Honeypot for spam protection -->
+          <input type="text" id="fcb-honeypot" name="website_url" class="fcb-honeypot"
+            style="display:none !important; visibility:hidden !important; position:absolute !important; left:-9999px !important;"
+            autocomplete="off" tabindex="-1" aria-hidden="true">
+
+
+          <!-- Submit button -->
+          <button class="fcb-submit" id="fcb-submit-btn" type="button" aria-label="Get instant quote via WhatsApp">
+            <span class="fcb-btn-normal">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              Get Instant Quote on WhatsApp
+            </span>
+            <span class="fcb-btn-loading" aria-hidden="true">
+              <span class="fcb-spinner"></span> Redirecting to WhatsApp…
+            </span>
+          </button>
+
+        </div><!-- /fcb-root -->
+
       </div>
 
-      <!-- Dynamic form panels (built by booking.js) -->
-      <div class="fcb-panels"></div>
-
-      <!-- Honeypot for spam protection -->
-      <input type="text" id="fcb-honeypot" name="website_url" class="fcb-honeypot" style="display:none !important; visibility:hidden !important; position:absolute !important; left:-9999px !important;" autocomplete="off" tabindex="-1" aria-hidden="true">
-
-
-      <!-- Submit button -->
-      <button class="fcb-submit" id="fcb-submit-btn" type="button"
-        aria-label="Get instant quote via WhatsApp">
-        <span class="fcb-btn-normal">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i>
-          Get Instant Quote on WhatsApp
-        </span>
-        <span class="fcb-btn-loading" aria-hidden="true">
-          <span class="fcb-spinner"></span> Redirecting to WhatsApp…
-        </span>
-      </button>
-
-    </div><!-- /fcb-root -->
-
-  </div>
-
-  <!-- Stats strip -->
-  <div class="fc-hero-stats container" role="region" aria-label="Key statistics">
-    <div class="fc-hstat">
-      <span class="fc-hstat-num fc-counter" data-target="4.9" aria-label="4.9 star customer rating">0</span>
-      <span class="fc-hstat-lbl">⭐ Customer Rating</span>
-    </div>
-    <div class="fc-hstat">
-      <span class="fc-hstat-num fc-counter" data-target="5000" data-suffix="+" aria-label="5000 plus happy trips">0</span>
-      <span class="fc-hstat-lbl">Happy Trips</span>
-    </div>
-    <div class="fc-hstat">
-      <span class="fc-hstat-num fc-counter" data-target="100" data-suffix="+" aria-label="100 plus expert drivers">0</span>
-      <span class="fc-hstat-lbl">Expert Drivers</span>
-    </div>
-    <div class="fc-hstat">
-      <span class="fc-hstat-num" aria-label="24/7 availability">24/7</span>
-      <span class="fc-hstat-lbl">Always Available</span>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ ROAD ANIMATION ═══════════════ -->
-<div class="fc-road" aria-hidden="true">
-  <div class="fc-road-track" id="fc-road-track"></div>
-  <div class="fc-road-car">🚕</div>
-</div>
-
-<!-- ═══════════════ SERVICES ═══════════════ -->
-<section class="section bg-white" id="services" aria-labelledby="services-heading">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow" aria-hidden="true">What We Offer</span>
-      <h2 id="services-heading">Premium <span class="grad-text">Services</span></h2>
-      <p>Professional transportation solutions tailored to every journey — comfortable, safe and always on time.</p>
-    </div>
-
-    <div class="grid-3 stagger-children" style="margin-bottom:52px;">
-      <article class="fc-svc-card reveal-up">
-        <span class="fc-svc-num" aria-hidden="true">01</span>
-        <div class="fc-svc-icon fc-svc-icon-gold" aria-hidden="true"><i class="fas fa-plane-departure"></i></div>
-        <h3>Airport Transfers</h3>
-        <p>Punctual airport pickup and drop with real-time flight tracking. Professional drivers ensure you're always on time.</p>
-        <a href="services.html#airport" class="fc-svc-link" aria-label="Learn more about airport transfers">
-          Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </article>
-      <article class="fc-svc-card reveal-up">
-        <span class="fc-svc-num" aria-hidden="true">02</span>
-        <div class="fc-svc-icon fc-svc-icon-dark" aria-hidden="true"><i class="fas fa-city"></i></div>
-        <h3>City Rides</h3>
-        <p>Reliable AC transportation for daily commutes, business meetings and shopping trips across Chennai.</p>
-        <a href="services.html#city" class="fc-svc-link" aria-label="Learn more about city rides">
-          Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </article>
-      <article class="fc-svc-card reveal-up">
-        <span class="fc-svc-num" aria-hidden="true">03</span>
-        <div class="fc-svc-icon fc-svc-icon-amber" aria-hidden="true"><i class="fas fa-road"></i></div>
-        <h3>Outstation Trips</h3>
-        <p>Comfortable travel to Pondicherry, Mahabalipuram, Tirupati and beyond with experienced drivers.</p>
-        <a href="services.html#outstation" class="fc-svc-link" aria-label="Learn more about outstation trips">
-          Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </article>
-    </div>
-
-    <!-- Feature pills -->
-    <div class="grid-pills reveal stagger-children">
-      <div class="fc-feat-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> GPS Tracked &amp; Verified</div>
-      <div class="fc-feat-pill"><i class="fas fa-clock" aria-hidden="true"></i> 24/7 Available</div>
-      <div class="fc-feat-pill"><i class="fas fa-snowflake" aria-hidden="true"></i> Full AC Comfort</div>
-      <div class="fc-feat-pill"><i class="fas fa-rupee-sign" aria-hidden="true"></i> Transparent Pricing</div>
-      <div class="fc-feat-pill"><i class="fas fa-headset" aria-hidden="true"></i> Dedicated Support</div>
-      <div class="fc-feat-pill"><i class="fas fa-star" aria-hidden="true"></i> 4.9 ★ Rated</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ QUICK BOOK BAR ═══════════════ -->
-<div class="fc-qb-bar" aria-label="Quick booking call to action">
-  <div class="container">
-    <div class="fc-qb-inner">
-      <div class="fc-qb-text reveal-left">
-        <h2>Ready to ride with the <span class="grad-text">best?</span></h2>
-        <p>Call us now or send a WhatsApp message for instant booking — no app needed.</p>
-      </div>
-      <div class="fc-qb-acts reveal-right">
-        <a href="tel:+919884957791" class="btn btn-primary btn-lg" aria-label="Call FIRST CAB">
-          <i class="fas fa-phone" aria-hidden="true"></i> Call Now
-        </a>
-        <a href="https://wa.me/919884957791" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg" aria-label="WhatsApp FIRST CAB">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════ WHY US ═══════════════ -->
-<section class="fc-why-sec" aria-labelledby="why-heading">
-  <div class="container">
-    <div class="fc-why-grid">
-      <div class="fc-why-visual reveal-left">
-        <div class="fc-why-frame" aria-hidden="true"></div>
-        <img class="fc-why-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Professional FIRST CAB driver in uniform" loading="lazy">
-        <div class="fc-why-badge" aria-hidden="true">
-          <span class="big">20+</span>
-          <span class="sm">Years Serving Chennai</span>
+      <!-- Stats strip -->
+      <div class="fc-hero-stats container" role="region" aria-label="Key statistics">
+        <div class="fc-hstat">
+          <span class="fc-hstat-num fc-counter" data-target="4.9" aria-label="4.9 star customer rating">0</span>
+          <span class="fc-hstat-lbl">⭐ Customer Rating</span>
+        </div>
+        <div class="fc-hstat">
+          <span class="fc-hstat-num fc-counter" data-target="5000" data-suffix="+"
+            aria-label="5000 plus happy trips">0</span>
+          <span class="fc-hstat-lbl">Happy Trips</span>
+        </div>
+        <div class="fc-hstat">
+          <span class="fc-hstat-num fc-counter" data-target="100" data-suffix="+"
+            aria-label="100 plus expert drivers">0</span>
+          <span class="fc-hstat-lbl">Expert Drivers</span>
+        </div>
+        <div class="fc-hstat">
+          <span class="fc-hstat-num" aria-label="24/7 availability">24/7</span>
+          <span class="fc-hstat-lbl">Always Available</span>
         </div>
       </div>
-      <div class="fc-why-content reveal-right">
-        <span class="eyebrow" style="color:var(--gold);--eyebrow-color:var(--gold)" aria-hidden="true">Why Choose Us</span>
-        <h2 id="why-heading" style="color:var(--white)">Chennai's Most <span class="grad-text">Trusted Cab</span></h2>
-        <p>Since 2004, FIRST CAB has been delivering safe, reliable and premium transportation. We combine professionalism with genuine care for every passenger.</p>
-        <ul class="fc-why-points" role="list">
-          <li class="fc-why-point reveal-up">
-            <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-user-check"></i></div>
-            <div class="fc-why-pt-text">
-              <h5>Background-Verified Drivers</h5>
-              <p>Every driver undergoes thorough background checks and professional training.</p>
-            </div>
-          </li>
-          <li class="fc-why-point reveal-up" data-delay="80">
-            <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="fc-why-pt-text">
-              <h5>Real-Time GPS Tracking</h5>
-              <p>All vehicles GPS-equipped so your loved ones always know where you are.</p>
-            </div>
-          </li>
-          <li class="fc-why-point reveal-up" data-delay="160">
-            <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
-            <div class="fc-why-pt-text">
-              <h5>Well-Maintained Fleet</h5>
-              <p>Regular servicing and hygiene checks ensure a comfortable, safe ride every time.</p>
-            </div>
-          </li>
-          <li class="fc-why-point reveal-up" data-delay="240">
-            <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-tag"></i></div>
-            <div class="fc-why-pt-text">
-              <h5>No Hidden Charges</h5>
-              <p>Transparent pricing — what we quote is exactly what you pay.</p>
-            </div>
-          </li>
-          <li class="fc-why-point reveal-up" data-delay="320">
-            <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-headset"></i></div>
-            <div class="fc-why-pt-text">
-              <h5>Round-the-Clock Support</h5>
-              <p>Our team is always reachable for bookings, queries or emergencies.</p>
-            </div>
-          </li>
-        </ul>
+    </section>
+
+    <!-- ═══════════════ ROAD ANIMATION ═══════════════ -->
+    <div class="fc-road" aria-hidden="true">
+      <div class="fc-road-track" id="fc-road-track"></div>
+      <div class="fc-road-car">🚕</div>
+    </div>
+
+    <!-- ═══════════════ SERVICES ═══════════════ -->
+    <section class="section bg-white" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow" aria-hidden="true">What We Offer</span>
+          <h2 id="services-heading">Premium <span class="grad-text">Services</span></h2>
+          <p>Professional transportation solutions tailored to every journey — comfortable, safe and always on time.</p>
+        </div>
+
+        <div class="grid-3 stagger-children" style="margin-bottom:52px;">
+          <article class="fc-svc-card reveal-up">
+            <span class="fc-svc-num" aria-hidden="true">01</span>
+            <div class="fc-svc-icon fc-svc-icon-gold" aria-hidden="true"><i class="fas fa-plane-departure"></i></div>
+            <h3>Airport Transfers</h3>
+            <p>Punctual airport pickup and drop with real-time flight tracking. Professional drivers ensure you're
+              always on time.</p>
+            <a href="services.html#airport" class="fc-svc-link" aria-label="Learn more about airport transfers">
+              Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+          <article class="fc-svc-card reveal-up">
+            <span class="fc-svc-num" aria-hidden="true">02</span>
+            <div class="fc-svc-icon fc-svc-icon-dark" aria-hidden="true"><i class="fas fa-city"></i></div>
+            <h3>City Rides</h3>
+            <p>Reliable AC transportation for daily commutes, business meetings and shopping trips across Chennai.</p>
+            <a href="services.html#city" class="fc-svc-link" aria-label="Learn more about city rides">
+              Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+          <article class="fc-svc-card reveal-up">
+            <span class="fc-svc-num" aria-hidden="true">03</span>
+            <div class="fc-svc-icon fc-svc-icon-amber" aria-hidden="true"><i class="fas fa-road"></i></div>
+            <h3>Outstation Trips</h3>
+            <p>Comfortable travel to Pondicherry, Mahabalipuram, Tirupati and beyond with experienced drivers.</p>
+            <a href="services.html#outstation" class="fc-svc-link" aria-label="Learn more about outstation trips">
+              Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
+
+        <!-- Feature pills -->
+        <div class="grid-pills reveal stagger-children">
+          <div class="fc-feat-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> GPS Tracked &amp; Verified
+          </div>
+          <div class="fc-feat-pill"><i class="fas fa-clock" aria-hidden="true"></i> 24/7 Available</div>
+          <div class="fc-feat-pill"><i class="fas fa-snowflake" aria-hidden="true"></i> Full AC Comfort</div>
+          <div class="fc-feat-pill"><i class="fas fa-rupee-sign" aria-hidden="true"></i> Transparent Pricing</div>
+          <div class="fc-feat-pill"><i class="fas fa-headset" aria-hidden="true"></i> Dedicated Support</div>
+          <div class="fc-feat-pill"><i class="fas fa-star" aria-hidden="true"></i> 4.9 ★ Rated</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ QUICK BOOK BAR ═══════════════ -->
+    <div class="fc-qb-bar" aria-label="Quick booking call to action">
+      <div class="container">
+        <div class="fc-qb-inner">
+          <div class="fc-qb-text reveal-left">
+            <h2>Ready to ride with the <span class="grad-text">best?</span></h2>
+            <p>Call us now or send a WhatsApp message for instant booking — no app needed.</p>
+          </div>
+          <div class="fc-qb-acts reveal-right">
+            <a href="tel:+919884957791" class="btn btn-primary btn-lg" aria-label="Call FIRST CAB">
+              <i class="fas fa-phone" aria-hidden="true"></i> Call Now
+            </a>
+            <a href="https://wa.me/919884957791" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg"
+              aria-label="WhatsApp FIRST CAB">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ═══════════════ FLEET CAROUSEL ═══════════════ -->
-<section class="section bg-soft" id="fleet" aria-labelledby="fleet-heading">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow" aria-hidden="true">Our Fleet</span>
-      <h2 id="fleet-heading">Vehicles for <span class="grad-text">Every Journey</span></h2>
-      <p>Pick your journey type — we'll match the perfect vehicle for you.</p>
+    <!-- ═══════════════ WHY US ═══════════════ -->
+    <section class="fc-why-sec" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="fc-why-grid">
+          <div class="fc-why-visual reveal-left">
+            <div class="fc-why-frame" aria-hidden="true"></div>
+            <img class="fc-why-img"
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
+              alt="Professional FIRST CAB driver in uniform" loading="lazy">
+            <div class="fc-why-badge" aria-hidden="true">
+              <span class="big">20+</span>
+              <span class="sm">Years Serving Chennai</span>
+            </div>
+          </div>
+          <div class="fc-why-content reveal-right">
+            <span class="eyebrow" style="color:var(--gold);--eyebrow-color:var(--gold)" aria-hidden="true">Why Choose
+              Us</span>
+            <h2 id="why-heading" style="color:var(--white)">Chennai's Most <span class="grad-text">Trusted Cab</span>
+            </h2>
+            <p>Since 2004, FIRST CAB has been delivering safe, reliable and premium transportation. We combine
+              professionalism with genuine care for every passenger.</p>
+            <ul class="fc-why-points" role="list">
+              <li class="fc-why-point reveal-up">
+                <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-user-check"></i></div>
+                <div class="fc-why-pt-text">
+                  <h5>Background-Verified Drivers</h5>
+                  <p>Every driver undergoes thorough background checks and professional training.</p>
+                </div>
+              </li>
+              <li class="fc-why-point reveal-up" data-delay="80">
+                <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="fc-why-pt-text">
+                  <h5>Real-Time GPS Tracking</h5>
+                  <p>All vehicles GPS-equipped so your loved ones always know where you are.</p>
+                </div>
+              </li>
+              <li class="fc-why-point reveal-up" data-delay="160">
+                <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                <div class="fc-why-pt-text">
+                  <h5>Well-Maintained Fleet</h5>
+                  <p>Regular servicing and hygiene checks ensure a comfortable, safe ride every time.</p>
+                </div>
+              </li>
+              <li class="fc-why-point reveal-up" data-delay="240">
+                <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-tag"></i></div>
+                <div class="fc-why-pt-text">
+                  <h5>No Hidden Charges</h5>
+                  <p>Transparent pricing — what we quote is exactly what you pay.</p>
+                </div>
+              </li>
+              <li class="fc-why-point reveal-up" data-delay="320">
+                <div class="fc-why-pt-icon" aria-hidden="true"><i class="fas fa-headset"></i></div>
+                <div class="fc-why-pt-text">
+                  <h5>Round-the-Clock Support</h5>
+                  <p>Our team is always reachable for bookings, queries or emergencies.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FLEET CAROUSEL ═══════════════ -->
+    <section class="section bg-soft" id="fleet" aria-labelledby="fleet-heading">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow" aria-hidden="true">Our Fleet</span>
+          <h2 id="fleet-heading">Vehicles for <span class="grad-text">Every Journey</span></h2>
+          <p>Pick your journey type — we'll match the perfect vehicle for you.</p>
+        </div>
+
+        <!-- Journey Filter Tabs -->
+        <div class="fc-journey-tabs reveal" role="tablist" aria-label="Filter fleet by journey type">
+          <button class="fc-journey-tab active" data-journey="all" role="tab" aria-selected="true">
+            <i class="fas fa-th" aria-hidden="true"></i> All Vehicles
+          </button>
+          <button class="fc-journey-tab" data-journey="airport" role="tab" aria-selected="false">
+            <i class="fas fa-plane" aria-hidden="true"></i> Airport
+          </button>
+          <button class="fc-journey-tab" data-journey="city" role="tab" aria-selected="false">
+            <i class="fas fa-city" aria-hidden="true"></i> City Ride
+          </button>
+          <button class="fc-journey-tab" data-journey="outstation" role="tab" aria-selected="false">
+            <i class="fas fa-road" aria-hidden="true"></i> Outstation
+          </button>
+          <button class="fc-journey-tab" data-journey="corporate" role="tab" aria-selected="false">
+            <i class="fas fa-briefcase" aria-hidden="true"></i> Corporate
+          </button>
+        </div>
+        <!-- Carousel Wrapper (now inside container) -->
+        <div class="fc-carousel" id="fc-carousel" aria-label="Vehicle fleet carousel">
+
+          <!-- Prev / Next arrows -->
+          <button class="fc-carousel-arrow fc-carousel-prev" id="fc-carousel-prev" aria-label="Previous vehicle">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="fc-carousel-arrow fc-carousel-next" id="fc-carousel-next" aria-label="Next vehicle">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <!-- Track (slides horizontally) -->
+          <div class="fc-carousel-track-wrap">
+            <div class="fc-carousel-track" id="fc-carousel-track">
+
+              <!-- Slide 1 — Innova Crysta -->
+              <article class="fc-carousel-slide" data-journeys="all airport outstation corporate" role="group"
+                aria-label="Vehicle 1 of 3">
+                <div class="fc-carousel-img-wrap">
+                  <img src="crysta-front.png" alt="Toyota Innova Crysta — premium 7-seater executive SUV" loading="lazy"
+                    draggable="false">
+                  <span class="fc-fleet-badge fc-price-badge-gold">🏆 Best Seller</span>
+                </div>
+                <div class="fc-carousel-body">
+                  <h3 class="fc-carousel-title">Innova Crysta</h3>
+                  <p class="fc-carousel-desc">Premium executive class — spacious, powerful and ideal for families or
+                    corporate travel.</p>
+                  <div class="fc-fleet-specs">
+                    <span class="fc-fleet-spec"><i class="fas fa-users" aria-hidden="true"></i> 7 Seats</span>
+                    <span class="fc-fleet-spec"><i class="fas fa-snowflake" aria-hidden="true"></i> AC</span>
+                    <span class="fc-fleet-spec"><i class="fas fa-suitcase" aria-hidden="true"></i> Large Boot</span>
+                  </div>
+                  <div class="fc-fleet-journey-tags">
+                    <span class="fc-journey-tag">✈ Airport</span>
+                    <span class="fc-journey-tag">🛣 Outstation</span>
+                    <span class="fc-journey-tag">💼 Corporate</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book This Car</a>
+                </div>
+              </article>
+
+              <!-- Slide 2 — Honda City / Sedan -->
+              <article class="fc-carousel-slide" data-journeys="all city corporate" role="group"
+                aria-label="Vehicle 2 of 3">
+                <div class="fc-carousel-img-wrap">
+                  <img src="swift-dezire.png" alt="Honda City sedan — comfortable 4-seater" loading="lazy"
+                    draggable="false">
+                  <span class="fc-fleet-badge fc-price-badge-gold">⭐ Popular</span>
+                </div>
+                <div class="fc-carousel-body">
+                  <h3 class="fc-carousel-title">Sedan — Honda City / Ciaz</h3>
+                  <p class="fc-carousel-desc">Smooth, comfortable sedans perfect for solo travellers and business
+                    commutes.</p>
+                  <div class="fc-fleet-specs">
+                    <span class="fc-fleet-spec"><i class="fas fa-users" aria-hidden="true"></i> 4 Seats</span>
+                    <span class="fc-fleet-spec"><i class="fas fa-snowflake" aria-hidden="true"></i> AC</span>
+                    <span class="fc-fleet-spec"><i class="fas fa-bolt" aria-hidden="true"></i> Fuel Efficient</span>
+                  </div>
+                  <div class="fc-fleet-journey-tags">
+                    <span class="fc-journey-tag">🏙 City</span>
+                    <span class="fc-journey-tag">💼 Corporate</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book This Car</a>
+                </div>
+              </article>
+
+              <!-- Slide 3 — Kia Carens / Innova -->
+              <article class="fc-carousel-slide" data-journeys="all airport outstation city" role="group"
+                aria-label="Vehicle 3 of 3">
+                <div class="fc-carousel-img-wrap">
+                  <img src="carens.png" alt="Kia Carens — spacious 7-seater MPV" loading="lazy" draggable="false">
+                  <span class="fc-fleet-badge fc-price-badge-gold">✈ Airport Special</span>
+                </div>
+                <div class="fc-carousel-body">
+                  <h3 class="fc-carousel-title">Toyota Innova / Kia Carens</h3>
+                  <p class="fc-carousel-desc">Versatile 7-seater MPVs offering the ideal balance of space and comfort
+                    for any trip.</p>
+                  <div class="fc-fleet-specs">
+                    <span class="fc-fleet-spec"><i class="fas fa-users" aria-hidden="true"></i> 7 Seats</span>
+                    <span class="fc-fleet-spec"><i class="fas fa-snowflake" aria-hidden="true"></i> AC</span>
+                    <span class="fc-fleet-spec"><i class="fas fa-plane" aria-hidden="true"></i> Airport Ready</span>
+                  </div>
+                  <div class="fc-fleet-journey-tags">
+                    <span class="fc-journey-tag">✈ Airport</span>
+                    <span class="fc-journey-tag">🛣 Outstation</span>
+                    <span class="fc-journey-tag">🏙 City</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book This Car</a>
+                </div>
+              </article>
+
+            </div><!-- /track -->
+          </div><!-- /track-wrap -->
+
+          <!-- Dot Indicators -->
+          <div class="fc-carousel-dots" id="fc-carousel-dots" role="tablist" aria-label="Slide indicators">
+            <button class="fc-carousel-dot active" data-slide="0" role="tab" aria-selected="true"
+              aria-label="Slide 1"></button>
+            <button class="fc-carousel-dot" data-slide="1" role="tab" aria-selected="false"
+              aria-label="Slide 2"></button>
+            <button class="fc-carousel-dot" data-slide="2" role="tab" aria-selected="false"
+              aria-label="Slide 3"></button>
+          </div>
+
+        </div><!-- /carousel -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- ═══════════════ PREMIUM SERVICES ═══════════════ -->
+    <section class="section bg-white" id="premium-services" aria-labelledby="ps-heading">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow" aria-hidden="true">Premium Experiences</span>
+          <h2 id="ps-heading">Services for <span class="grad-text">Every Occasion</span></h2>
+          <p>Tailored rides for every purpose — seamless, comfortable, on time.</p>
+        </div>
+        <!-- Premium Services Carousel -->
+        <div class="fc-carousel fc-ps-carousel" id="fc-ps-carousel" aria-label="Premium services carousel">
+
+          <button class="fc-carousel-arrow fc-carousel-prev" id="fc-ps-prev" aria-label="Previous service">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="fc-carousel-arrow fc-carousel-next" id="fc-ps-next" aria-label="Next service">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div class="fc-carousel-track-wrap">
+            <div class="fc-carousel-track" id="fc-ps-track">
+
+              <!-- Card 1 — Airport Elite -->
+              <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 1 of 5">
+                <div class="fc-ps-img-wrap"
+                  style="--ps-grad:linear-gradient(135deg,#0a0a14 0%,#1a1030 60%,#2d1a00 100%)">
+                  <div class="fc-ps-icon-ring"><i class="fas fa-plane-departure"></i></div>
+                  <span class="fc-fleet-badge fc-price-badge-gold">✈ Airport Special</span>
+                </div>
+                <div class="fc-carousel-body fc-ps-body">
+                  <h3 class="fc-carousel-title">Airport Elite</h3>
+                  <p class="fc-carousel-desc">Flight tracking, meet & greet, zero wait.</p>
+                  <div class="fc-ps-perks">
+                    <span class="fc-ps-perk"><i class="fas fa-clock"></i> 24/7</span>
+                    <span class="fc-ps-perk"><i class="fas fa-check-circle"></i> Pre-booked</span>
+                    <span class="fc-ps-perk"><i class="fas fa-suitcase"></i> Luggage OK</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
+                </div>
+              </article>
+
+              <!-- Card 2 — City Comfort -->
+              <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 2 of 5">
+                <div class="fc-ps-img-wrap"
+                  style="--ps-grad:linear-gradient(135deg,#0a0e0a 0%,#0f2010 60%,#001a10 100%)">
+                  <div class="fc-ps-icon-ring"><i class="fas fa-city"></i></div>
+                  <span class="fc-fleet-badge fc-price-badge-gold">⭐ Popular</span>
+                </div>
+                <div class="fc-carousel-body fc-ps-body">
+                  <h3 class="fc-carousel-title">City Comfort</h3>
+                  <p class="fc-carousel-desc">Smooth daily city rides, AC comfort guaranteed.</p>
+                  <div class="fc-ps-perks">
+                    <span class="fc-ps-perk"><i class="fas fa-map-marker-alt"></i> Door-to-door</span>
+                    <span class="fc-ps-perk"><i class="fas fa-snowflake"></i> AC</span>
+                    <span class="fc-ps-perk"><i class="fas fa-bolt"></i> Fast pickup</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
+                </div>
+              </article>
+
+              <!-- Card 3 — Highway Voyager -->
+              <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 3 of 5">
+                <div class="fc-ps-img-wrap"
+                  style="--ps-grad:linear-gradient(135deg,#0e0a00 0%,#201408 60%,#3a1800 100%)">
+                  <div class="fc-ps-icon-ring"><i class="fas fa-road"></i></div>
+                  <span class="fc-fleet-badge fc-price-badge-gold">🛣 Outstation</span>
+                </div>
+                <div class="fc-carousel-body fc-ps-body">
+                  <h3 class="fc-carousel-title">Highway Voyager</h3>
+                  <p class="fc-carousel-desc">Outstation trips, one-way & round-trip fares.</p>
+                  <div class="fc-ps-perks">
+                    <span class="fc-ps-perk"><i class="fas fa-road"></i> Long distance</span>
+                    <span class="fc-ps-perk"><i class="fas fa-users"></i> Family SUV</span>
+                    <span class="fc-ps-perk"><i class="fas fa-tag"></i> Flat rate</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
+                </div>
+              </article>
+
+              <!-- Card 4 — Corporate Class -->
+              <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 4 of 5">
+                <div class="fc-ps-img-wrap"
+                  style="--ps-grad:linear-gradient(135deg,#090912 0%,#12102a 60%,#1a0a24 100%)">
+                  <div class="fc-ps-icon-ring"><i class="fas fa-briefcase"></i></div>
+                  <span class="fc-fleet-badge fc-price-badge-gold">💼 Corporate</span>
+                </div>
+                <div class="fc-carousel-body fc-ps-body">
+                  <h3 class="fc-carousel-title">Corporate Class</h3>
+                  <p class="fc-carousel-desc">Executive rides for client meetings & events.</p>
+                  <div class="fc-ps-perks">
+                    <span class="fc-ps-perk"><i class="fas fa-user-tie"></i> Uniform driver</span>
+                    <span class="fc-ps-perk"><i class="fas fa-wifi"></i> WiFi ready</span>
+                    <span class="fc-ps-perk"><i class="fas fa-receipt"></i> Invoice</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
+                </div>
+              </article>
+
+              <!-- Card 5 — Hourly Package -->
+              <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 5 of 5">
+                <div class="fc-ps-img-wrap"
+                  style="--ps-grad:linear-gradient(135deg,#0e0e00 0%,#1a1a00 60%,#2a1400 100%)">
+                  <div class="fc-ps-icon-ring"><i class="fas fa-clock"></i></div>
+                  <span class="fc-fleet-badge fc-price-badge-gold">⏰ Bestseller</span>
+                </div>
+                <div class="fc-carousel-body fc-ps-body">
+                  <h3 class="fc-carousel-title">Hourly Package</h3>
+                  <p class="fc-carousel-desc">4 or 8-hour packages for local trips & events.</p>
+                  <div class="fc-ps-perks">
+                    <span class="fc-ps-perk"><i class="fas fa-stopwatch"></i> 4 or 8 hrs</span>
+                    <span class="fc-ps-perk"><i class="fas fa-map"></i> Flexible route</span>
+                    <span class="fc-ps-perk"><i class="fas fa-rupee-sign"></i> Best value</span>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
+                </div>
+              </article>
+
+            </div><!-- /ps-track -->
+          </div>
+
+          <!-- Dots -->
+          <div class="fc-carousel-dots" id="fc-ps-dots" role="tablist" aria-label="Service slide indicators">
+            <button class="fc-carousel-dot active" data-slide="0" role="tab" aria-selected="true"
+              aria-label="Slide 1"></button>
+            <button class="fc-carousel-dot" data-slide="1" role="tab" aria-selected="false"
+              aria-label="Slide 2"></button>
+            <button class="fc-carousel-dot" data-slide="2" role="tab" aria-selected="false"
+              aria-label="Slide 3"></button>
+            <button class="fc-carousel-dot" data-slide="3" role="tab" aria-selected="false"
+              aria-label="Slide 4"></button>
+            <button class="fc-carousel-dot" data-slide="4" role="tab" aria-selected="false"
+              aria-label="Slide 5"></button>
+          </div>
+
+        </div><!-- /fc-ps-carousel -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+    <section class="section bg-white" aria-labelledby="testi-heading">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow" aria-hidden="true">Passenger Reviews</span>
+          <h2 id="testi-heading">What Our <span class="grad-text">Customers Say</span></h2>
+          <p>Real experiences from real passengers who trust FIRST CAB every day.</p>
+        </div>
+      </div>
+
+      <!-- Infinite Marquee -->
+      <div class="fc-testi-marquee-wrap" aria-label="Customer testimonials carousel">
+        <div class="fc-testi-track">
+
+          <!-- Card 1 -->
+          <article class="fc-testi-card">
+            <div class="fc-testi-qdeco" aria-hidden="true">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0s" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="fc-testi-text">"Absolutely punctual for my early morning flight. Driver was professional and the
+              Innova Crysta was spotlessly clean. Will always book FIRST CAB for airport trips."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar" aria-hidden="true">R</div>
+              <div>
+                <div class="fc-testi-name">Ramesh K.</div>
+                <div class="fc-testi-role">Software Engineer, Chennai</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="fc-testi-card">
+            <div class="fc-testi-qdeco" aria-hidden="true">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0.6s" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="fc-testi-text">"Used FIRST CAB for a Pondicherry family trip. Comfortable ride, experienced
+              driver, no hidden charges. Best outstation cab in Chennai, hands down."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar" aria-hidden="true">P</div>
+              <div>
+                <div class="fc-testi-name">Priya S.</div>
+                <div class="fc-testi-role">Teacher, Anna Nagar</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="fc-testi-card">
+            <div class="fc-testi-qdeco" aria-hidden="true">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:1.2s" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="fc-testi-text">"Use FIRST CAB for all corporate client pickups. Very reliable, professional
+              drivers, vehicles always well-maintained. Highly recommended for business travel."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="fc-testi-name">Arvind M.</div>
+                <div class="fc-testi-role">Business Owner, T. Nagar</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="fc-testi-card">
+            <div class="fc-testi-qdeco" aria-hidden="true">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0.3s" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="fc-testi-text">"Booked a last-minute cab to the airport at 3 AM — they arrived in 15 minutes!
+              Saved my flight. FIRST CAB is the most reliable service I've used in Chennai."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar" aria-hidden="true">S</div>
+              <div>
+                <div class="fc-testi-name">Sundar V.</div>
+                <div class="fc-testi-role">IT Manager, OMR</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="fc-testi-card">
+            <div class="fc-testi-qdeco" aria-hidden="true">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0.9s" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="fc-testi-text">"Took FIRST CAB for our Ooty trip — all 7 of us fit perfectly in the Innova. The
+              driver knew all the mountain routes, made the whole trip stress-free and memorable."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="fc-testi-name">Meena R.</div>
+                <div class="fc-testi-role">Homemaker, Adyar</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="fc-testi-card">
+            <div class="fc-testi-qdeco" aria-hidden="true">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:1.5s" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="fc-testi-text">"The price was transparent from the start — no surprises at the end. Clean car,
+              polite driver, smooth ride. This is how cab services should be run."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar" aria-hidden="true">K</div>
+              <div>
+                <div class="fc-testi-name">Karthik B.</div>
+                <div class="fc-testi-role">Chartered Accountant, Nungambakkam</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Duplicate set for seamless loop -->
+          <!-- Card 1 dup -->
+          <article class="fc-testi-card" aria-hidden="true">
+            <div class="fc-testi-qdeco">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0s">★★★★★</div>
+            <p class="fc-testi-text">"Absolutely punctual for my early morning flight. Driver was professional and the
+              Innova Crysta was spotlessly clean. Will always book FIRST CAB for airport trips."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar">R</div>
+              <div>
+                <div class="fc-testi-name">Ramesh K.</div>
+                <div class="fc-testi-role">Software Engineer, Chennai</div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 2 dup -->
+          <article class="fc-testi-card" aria-hidden="true">
+            <div class="fc-testi-qdeco">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0.6s">★★★★★</div>
+            <p class="fc-testi-text">"Used FIRST CAB for a Pondicherry family trip. Comfortable ride, experienced
+              driver, no hidden charges. Best outstation cab in Chennai, hands down."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar">P</div>
+              <div>
+                <div class="fc-testi-name">Priya S.</div>
+                <div class="fc-testi-role">Teacher, Anna Nagar</div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 3 dup -->
+          <article class="fc-testi-card" aria-hidden="true">
+            <div class="fc-testi-qdeco">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:1.2s">★★★★★</div>
+            <p class="fc-testi-text">"Use FIRST CAB for all corporate client pickups. Very reliable, professional
+              drivers, vehicles always well-maintained. Highly recommended for business travel."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar">A</div>
+              <div>
+                <div class="fc-testi-name">Arvind M.</div>
+                <div class="fc-testi-role">Business Owner, T. Nagar</div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 4 dup -->
+          <article class="fc-testi-card" aria-hidden="true">
+            <div class="fc-testi-qdeco">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0.3s">★★★★★</div>
+            <p class="fc-testi-text">"Booked a last-minute cab to the airport at 3 AM — they arrived in 15 minutes!
+              Saved my flight. FIRST CAB is the most reliable service I've used in Chennai."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar">S</div>
+              <div>
+                <div class="fc-testi-name">Sundar V.</div>
+                <div class="fc-testi-role">IT Manager, OMR</div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 5 dup -->
+          <article class="fc-testi-card" aria-hidden="true">
+            <div class="fc-testi-qdeco">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:0.9s">★★★★★</div>
+            <p class="fc-testi-text">"Took FIRST CAB for our Ooty trip — all 7 of us fit perfectly in the Innova. The
+              driver knew all the mountain routes, made the whole trip stress-free and memorable."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar">M</div>
+              <div>
+                <div class="fc-testi-name">Meena R.</div>
+                <div class="fc-testi-role">Homemaker, Adyar</div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 6 dup -->
+          <article class="fc-testi-card" aria-hidden="true">
+            <div class="fc-testi-qdeco">"</div>
+            <div class="fc-testi-stars" style="--twinkle-delay:1.5s">★★★★★</div>
+            <p class="fc-testi-text">"The price was transparent from the start — no surprises at the end. Clean car,
+              polite driver, smooth ride. This is how cab services should be run."</p>
+            <div class="fc-testi-author">
+              <div class="fc-testi-avatar">K</div>
+              <div>
+                <div class="fc-testi-name">Karthik B.</div>
+                <div class="fc-testi-role">Chartered Accountant, Nungambakkam</div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /track -->
+      </div><!-- /marquee-wrap -->
+    </section>
+
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section class="fc-cta-sec" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="fc-cta-inner reveal">
+          <h2 id="cta-heading">Ready to <span class="grad-text">Travel Premium?</span></h2>
+          <p>Experience the best cab service in Chennai with our premium fleet and trained drivers.</p>
+          <div class="fc-cta-btns">
+            <a href="tel:+919884957791" class="btn btn-primary btn-lg" aria-label="Call FIRST CAB now">
+              <i class="fas fa-phone" aria-hidden="true"></i> Call Now
+            </a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Send Enquiry
+            </a>
+          </div>
+          <p class="fc-cta-note"><i class="fas fa-phone-alt" style="color: var(--gold); margin-right: 6px;"
+              aria-hidden="true"></i>Available 24/7 &nbsp;·&nbsp; WhatsApp: +91 98849 57791</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="fc-footer" role="contentinfo">
+    <div class="container">
+      <div class="fc-footer-grid">
+        <div>
+          <a href="index.html" class="fc-footer-logo" aria-label="FIRST CAB — Home">
+            <img src="firstcab-logo-new.png" alt="FIRST CAB Logo" class="fc-footer-logo-img">
+          </a>
+          <p class="fc-footer-desc">Premium cab services since 2004. Safety, comfort and reliability — your journey, our
+            priority.</p>
+          <div class="fc-socials">
+            <a href="https://wa.me/919884957791" target="_blank" rel="noopener" class="fc-social-btn"
+              aria-label="WhatsApp FIRST CAB"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="#" class="fc-social-btn" aria-label="FIRST CAB on Facebook"><i class="fab fa-facebook-f"
+                aria-hidden="true"></i></a>
+            <a href="#" class="fc-social-btn" aria-label="FIRST CAB on Instagram"><i class="fab fa-instagram"
+                aria-hidden="true"></i></a>
+            <a href="#" class="fc-social-btn" aria-label="FIRST CAB on Twitter"><i class="fab fa-twitter"
+                aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="fc-footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Services</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="fc-footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html#airport"><i class="fas fa-plane" aria-hidden="true"></i> Airport Transfers</a>
+            </li>
+            <li><a href="services.html#city"><i class="fas fa-car" aria-hidden="true"></i> City Rides</a></li>
+            <li><a href="services.html#outstation"><i class="fas fa-road" aria-hidden="true"></i> Outstation Trips</a>
+            </li>
+            <li><a href="services.html#packages"><i class="fas fa-clock" aria-hidden="true"></i> Hourly Packages</a>
+            </li>
+          </ul>
+        </div>
+        <div class="fc-footer-col">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><a href="tel:+919884957791"><i class="fas fa-phone" aria-hidden="true"></i> +91 98849 57791</a></li>
+            <li><a href="mailto:firstcabservice@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>
+                firstcabservice@gmail.com</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Koyambedu, Chennai 600040</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <!-- Journey Filter Tabs -->
-    <div class="fc-journey-tabs reveal" role="tablist" aria-label="Filter fleet by journey type">
-      <button class="fc-journey-tab active" data-journey="all" role="tab" aria-selected="true">
-        <i class="fas fa-th" aria-hidden="true"></i> All Vehicles
-      </button>
-      <button class="fc-journey-tab" data-journey="airport" role="tab" aria-selected="false">
-        <i class="fas fa-plane" aria-hidden="true"></i> Airport
-      </button>
-      <button class="fc-journey-tab" data-journey="city" role="tab" aria-selected="false">
-        <i class="fas fa-city" aria-hidden="true"></i> City Ride
-      </button>
-      <button class="fc-journey-tab" data-journey="outstation" role="tab" aria-selected="false">
-        <i class="fas fa-road" aria-hidden="true"></i> Outstation
-      </button>
-      <button class="fc-journey-tab" data-journey="corporate" role="tab" aria-selected="false">
-        <i class="fas fa-briefcase" aria-hidden="true"></i> Corporate
-      </button>
+    <div class="fc-footer-bottom">
+      <p>&copy; 2026 FIRST CAB. All rights reserved. Made with <i class="fas fa-heart" aria-hidden="true"></i> in
+        Chennai.</p>
     </div>
-    <!-- Carousel Wrapper (now inside container) -->
-    <div class="fc-carousel" id="fc-carousel" aria-label="Vehicle fleet carousel">
+  </footer>
 
-    <!-- Prev / Next arrows -->
-    <button class="fc-carousel-arrow fc-carousel-prev" id="fc-carousel-prev" aria-label="Previous vehicle">
-      <i class="fas fa-chevron-left"></i>
+  <!-- ═══════════════ FLOATING ACTIONS GROUP ═══════════════ -->
+  <div class="fc-floating-group">
+    <a href="tel:+919884957791" class="fc-float-call" aria-label="Call FIRST CAB">
+      <i class="fas fa-phone" aria-hidden="true"></i>
+    </a>
+    <a href="https://wa.me/919884957791" target="_blank" rel="noopener noreferrer" class="fc-float-wa"
+      aria-label="Chat with FIRST CAB on WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <button class="fc-back-top" id="fc-back-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
-    <button class="fc-carousel-arrow fc-carousel-next" id="fc-carousel-next" aria-label="Next vehicle">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-
-    <!-- Track (slides horizontally) -->
-    <div class="fc-carousel-track-wrap">
-      <div class="fc-carousel-track" id="fc-carousel-track">
-
-        <!-- Slide 1 — Innova Crysta -->
-        <article class="fc-carousel-slide" data-journeys="all airport outstation corporate" role="group" aria-label="Vehicle 1 of 3">
-          <div class="fc-carousel-img-wrap">
-            <img src="crysta-front.avif" alt="Toyota Innova Crysta — premium 7-seater executive SUV" loading="lazy" draggable="false">
-            <span class="fc-fleet-badge fc-price-badge-gold">🏆 Best Seller</span>
-          </div>
-          <div class="fc-carousel-body">
-            <h3 class="fc-carousel-title">Innova Crysta</h3>
-            <p class="fc-carousel-desc">Premium executive class — spacious, powerful and ideal for families or corporate travel.</p>
-            <div class="fc-fleet-specs">
-              <span class="fc-fleet-spec"><i class="fas fa-users" aria-hidden="true"></i> 7 Seats</span>
-              <span class="fc-fleet-spec"><i class="fas fa-snowflake" aria-hidden="true"></i> AC</span>
-              <span class="fc-fleet-spec"><i class="fas fa-suitcase" aria-hidden="true"></i> Large Boot</span>
-            </div>
-            <div class="fc-fleet-journey-tags">
-              <span class="fc-journey-tag">✈ Airport</span>
-              <span class="fc-journey-tag">🛣 Outstation</span>
-              <span class="fc-journey-tag">💼 Corporate</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book This Car</a>
-          </div>
-        </article>
-
-        <!-- Slide 2 — Honda City / Sedan -->
-        <article class="fc-carousel-slide" data-journeys="all city corporate" role="group" aria-label="Vehicle 2 of 3">
-          <div class="fc-carousel-img-wrap">
-            <img src="honda-city.avif" alt="Honda City sedan — comfortable 4-seater" loading="lazy" draggable="false">
-            <span class="fc-fleet-badge fc-price-badge-gold">⭐ Popular</span>
-          </div>
-          <div class="fc-carousel-body">
-            <h3 class="fc-carousel-title">Sedan — Honda City / Ciaz</h3>
-            <p class="fc-carousel-desc">Smooth, comfortable sedans perfect for solo travellers and business commutes.</p>
-            <div class="fc-fleet-specs">
-              <span class="fc-fleet-spec"><i class="fas fa-users" aria-hidden="true"></i> 4 Seats</span>
-              <span class="fc-fleet-spec"><i class="fas fa-snowflake" aria-hidden="true"></i> AC</span>
-              <span class="fc-fleet-spec"><i class="fas fa-bolt" aria-hidden="true"></i> Fuel Efficient</span>
-            </div>
-            <div class="fc-fleet-journey-tags">
-              <span class="fc-journey-tag">🏙 City</span>
-              <span class="fc-journey-tag">💼 Corporate</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book This Car</a>
-          </div>
-        </article>
-
-        <!-- Slide 3 — Kia Carens / Innova -->
-        <article class="fc-carousel-slide" data-journeys="all airport outstation city" role="group" aria-label="Vehicle 3 of 3">
-          <div class="fc-carousel-img-wrap">
-            <img src="carens.avif" alt="Kia Carens — spacious 7-seater MPV" loading="lazy" draggable="false">
-            <span class="fc-fleet-badge fc-price-badge-gold">✈ Airport Special</span>
-          </div>
-          <div class="fc-carousel-body">
-            <h3 class="fc-carousel-title">Toyota Innova / Kia Carens</h3>
-            <p class="fc-carousel-desc">Versatile 7-seater MPVs offering the ideal balance of space and comfort for any trip.</p>
-            <div class="fc-fleet-specs">
-              <span class="fc-fleet-spec"><i class="fas fa-users" aria-hidden="true"></i> 7 Seats</span>
-              <span class="fc-fleet-spec"><i class="fas fa-snowflake" aria-hidden="true"></i> AC</span>
-              <span class="fc-fleet-spec"><i class="fas fa-plane" aria-hidden="true"></i> Airport Ready</span>
-            </div>
-            <div class="fc-fleet-journey-tags">
-              <span class="fc-journey-tag">✈ Airport</span>
-              <span class="fc-journey-tag">🛣 Outstation</span>
-              <span class="fc-journey-tag">🏙 City</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book This Car</a>
-          </div>
-        </article>
-
-      </div><!-- /track -->
-    </div><!-- /track-wrap -->
-
-    <!-- Dot Indicators -->
-    <div class="fc-carousel-dots" id="fc-carousel-dots" role="tablist" aria-label="Slide indicators">
-      <button class="fc-carousel-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-      <button class="fc-carousel-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-      <button class="fc-carousel-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-    </div>
-
-  </div><!-- /carousel -->
-  </div><!-- /container -->
-</section>
-
-<!-- ═══════════════ PREMIUM SERVICES ═══════════════ -->
-<section class="section bg-white" id="premium-services" aria-labelledby="ps-heading">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow" aria-hidden="true">Premium Experiences</span>
-      <h2 id="ps-heading">Services for <span class="grad-text">Every Occasion</span></h2>
-      <p>Tailored rides for every purpose — seamless, comfortable, on time.</p>
-    </div>
-    <!-- Premium Services Carousel -->
-    <div class="fc-carousel fc-ps-carousel" id="fc-ps-carousel" aria-label="Premium services carousel">
-
-    <button class="fc-carousel-arrow fc-carousel-prev" id="fc-ps-prev" aria-label="Previous service">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <button class="fc-carousel-arrow fc-carousel-next" id="fc-ps-next" aria-label="Next service">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-
-    <div class="fc-carousel-track-wrap">
-      <div class="fc-carousel-track" id="fc-ps-track">
-
-        <!-- Card 1 — Airport Elite -->
-        <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 1 of 5">
-          <div class="fc-ps-img-wrap" style="--ps-grad:linear-gradient(135deg,#0a0a14 0%,#1a1030 60%,#2d1a00 100%)">
-            <div class="fc-ps-icon-ring"><i class="fas fa-plane-departure"></i></div>
-            <span class="fc-fleet-badge fc-price-badge-gold">✈ Airport Special</span>
-          </div>
-          <div class="fc-carousel-body fc-ps-body">
-            <h3 class="fc-carousel-title">Airport Elite</h3>
-            <p class="fc-carousel-desc">Flight tracking, meet & greet, zero wait.</p>
-            <div class="fc-ps-perks">
-              <span class="fc-ps-perk"><i class="fas fa-clock"></i> 24/7</span>
-              <span class="fc-ps-perk"><i class="fas fa-check-circle"></i> Pre-booked</span>
-              <span class="fc-ps-perk"><i class="fas fa-suitcase"></i> Luggage OK</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
-          </div>
-        </article>
-
-        <!-- Card 2 — City Comfort -->
-        <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 2 of 5">
-          <div class="fc-ps-img-wrap" style="--ps-grad:linear-gradient(135deg,#0a0e0a 0%,#0f2010 60%,#001a10 100%)">
-            <div class="fc-ps-icon-ring"><i class="fas fa-city"></i></div>
-            <span class="fc-fleet-badge fc-price-badge-gold">⭐ Popular</span>
-          </div>
-          <div class="fc-carousel-body fc-ps-body">
-            <h3 class="fc-carousel-title">City Comfort</h3>
-            <p class="fc-carousel-desc">Smooth daily city rides, AC comfort guaranteed.</p>
-            <div class="fc-ps-perks">
-              <span class="fc-ps-perk"><i class="fas fa-map-marker-alt"></i> Door-to-door</span>
-              <span class="fc-ps-perk"><i class="fas fa-snowflake"></i> AC</span>
-              <span class="fc-ps-perk"><i class="fas fa-bolt"></i> Fast pickup</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
-          </div>
-        </article>
-
-        <!-- Card 3 — Highway Voyager -->
-        <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 3 of 5">
-          <div class="fc-ps-img-wrap" style="--ps-grad:linear-gradient(135deg,#0e0a00 0%,#201408 60%,#3a1800 100%)">
-            <div class="fc-ps-icon-ring"><i class="fas fa-road"></i></div>
-            <span class="fc-fleet-badge fc-price-badge-gold">🛣 Outstation</span>
-          </div>
-          <div class="fc-carousel-body fc-ps-body">
-            <h3 class="fc-carousel-title">Highway Voyager</h3>
-            <p class="fc-carousel-desc">Outstation trips, one-way & round-trip fares.</p>
-            <div class="fc-ps-perks">
-              <span class="fc-ps-perk"><i class="fas fa-road"></i> Long distance</span>
-              <span class="fc-ps-perk"><i class="fas fa-users"></i> Family SUV</span>
-              <span class="fc-ps-perk"><i class="fas fa-tag"></i> Flat rate</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
-          </div>
-        </article>
-
-        <!-- Card 4 — Corporate Class -->
-        <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 4 of 5">
-          <div class="fc-ps-img-wrap" style="--ps-grad:linear-gradient(135deg,#090912 0%,#12102a 60%,#1a0a24 100%)">
-            <div class="fc-ps-icon-ring"><i class="fas fa-briefcase"></i></div>
-            <span class="fc-fleet-badge fc-price-badge-gold">💼 Corporate</span>
-          </div>
-          <div class="fc-carousel-body fc-ps-body">
-            <h3 class="fc-carousel-title">Corporate Class</h3>
-            <p class="fc-carousel-desc">Executive rides for client meetings & events.</p>
-            <div class="fc-ps-perks">
-              <span class="fc-ps-perk"><i class="fas fa-user-tie"></i> Uniform driver</span>
-              <span class="fc-ps-perk"><i class="fas fa-wifi"></i> WiFi ready</span>
-              <span class="fc-ps-perk"><i class="fas fa-receipt"></i> Invoice</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
-          </div>
-        </article>
-
-        <!-- Card 5 — Hourly Package -->
-        <article class="fc-carousel-slide fc-ps-slide" role="group" aria-label="Service 5 of 5">
-          <div class="fc-ps-img-wrap" style="--ps-grad:linear-gradient(135deg,#0e0e00 0%,#1a1a00 60%,#2a1400 100%)">
-            <div class="fc-ps-icon-ring"><i class="fas fa-clock"></i></div>
-            <span class="fc-fleet-badge fc-price-badge-gold">⏰ Bestseller</span>
-          </div>
-          <div class="fc-carousel-body fc-ps-body">
-            <h3 class="fc-carousel-title">Hourly Package</h3>
-            <p class="fc-carousel-desc">4 or 8-hour packages for local trips & events.</p>
-            <div class="fc-ps-perks">
-              <span class="fc-ps-perk"><i class="fas fa-stopwatch"></i> 4 or 8 hrs</span>
-              <span class="fc-ps-perk"><i class="fas fa-map"></i> Flexible route</span>
-              <span class="fc-ps-perk"><i class="fas fa-rupee-sign"></i> Best value</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-sm fc-carousel-cta">Book Now</a>
-          </div>
-        </article>
-
-      </div><!-- /ps-track -->
-    </div>
-
-    <!-- Dots -->
-    <div class="fc-carousel-dots" id="fc-ps-dots" role="tablist" aria-label="Service slide indicators">
-      <button class="fc-carousel-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-      <button class="fc-carousel-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-      <button class="fc-carousel-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-      <button class="fc-carousel-dot" data-slide="3" role="tab" aria-selected="false" aria-label="Slide 4"></button>
-      <button class="fc-carousel-dot" data-slide="4" role="tab" aria-selected="false" aria-label="Slide 5"></button>
-    </div>
-
-    </div><!-- /fc-ps-carousel -->
-  </div><!-- /container -->
-</section>
-
-<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
-<section class="section bg-white" aria-labelledby="testi-heading">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow" aria-hidden="true">Passenger Reviews</span>
-      <h2 id="testi-heading">What Our <span class="grad-text">Customers Say</span></h2>
-      <p>Real experiences from real passengers who trust FIRST CAB every day.</p>
-    </div>
   </div>
 
-  <!-- Infinite Marquee -->
-  <div class="fc-testi-marquee-wrap" aria-label="Customer testimonials carousel">
-    <div class="fc-testi-track">
+  <!-- Mobile bottom bar -->
+  <nav class="fc-mob-bar" aria-label="Mobile quick actions">
+    <a href="tel:+919884957791" class="fc-mob-bar-btn primary" aria-label="Call FIRST CAB">
+      <i class="fas fa-phone" aria-hidden="true"></i>Call
+    </a>
+    <a href="https://wa.me/919884957791" target="_blank" rel="noopener" class="fc-mob-bar-btn"
+      aria-label="WhatsApp FIRST CAB">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp
+    </a>
+    <a href="services.html" class="fc-mob-bar-btn" aria-label="View services">
+      <i class="fas fa-car" aria-hidden="true"></i>Services
+    </a>
+    <a href="contact.html" class="fc-mob-bar-btn" aria-label="Contact us">
+      <i class="fas fa-envelope" aria-hidden="true"></i>Contact
+    </a>
+  </nav>
 
-      <!-- Card 1 -->
-      <article class="fc-testi-card">
-        <div class="fc-testi-qdeco" aria-hidden="true">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0s" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="fc-testi-text">"Absolutely punctual for my early morning flight. Driver was professional and the Innova Crysta was spotlessly clean. Will always book FIRST CAB for airport trips."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar" aria-hidden="true">R</div>
-          <div><div class="fc-testi-name">Ramesh K.</div><div class="fc-testi-role">Software Engineer, Chennai</div></div>
-        </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="fc-testi-card">
-        <div class="fc-testi-qdeco" aria-hidden="true">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0.6s" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="fc-testi-text">"Used FIRST CAB for a Pondicherry family trip. Comfortable ride, experienced driver, no hidden charges. Best outstation cab in Chennai, hands down."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar" aria-hidden="true">P</div>
-          <div><div class="fc-testi-name">Priya S.</div><div class="fc-testi-role">Teacher, Anna Nagar</div></div>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="fc-testi-card">
-        <div class="fc-testi-qdeco" aria-hidden="true">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:1.2s" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="fc-testi-text">"Use FIRST CAB for all corporate client pickups. Very reliable, professional drivers, vehicles always well-maintained. Highly recommended for business travel."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar" aria-hidden="true">A</div>
-          <div><div class="fc-testi-name">Arvind M.</div><div class="fc-testi-role">Business Owner, T. Nagar</div></div>
-        </div>
-      </article>
-
-      <!-- Card 4 -->
-      <article class="fc-testi-card">
-        <div class="fc-testi-qdeco" aria-hidden="true">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0.3s" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="fc-testi-text">"Booked a last-minute cab to the airport at 3 AM — they arrived in 15 minutes! Saved my flight. FIRST CAB is the most reliable service I've used in Chennai."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar" aria-hidden="true">S</div>
-          <div><div class="fc-testi-name">Sundar V.</div><div class="fc-testi-role">IT Manager, OMR</div></div>
-        </div>
-      </article>
-
-      <!-- Card 5 -->
-      <article class="fc-testi-card">
-        <div class="fc-testi-qdeco" aria-hidden="true">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0.9s" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="fc-testi-text">"Took FIRST CAB for our Ooty trip — all 7 of us fit perfectly in the Innova. The driver knew all the mountain routes, made the whole trip stress-free and memorable."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar" aria-hidden="true">M</div>
-          <div><div class="fc-testi-name">Meena R.</div><div class="fc-testi-role">Homemaker, Adyar</div></div>
-        </div>
-      </article>
-
-      <!-- Card 6 -->
-      <article class="fc-testi-card">
-        <div class="fc-testi-qdeco" aria-hidden="true">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:1.5s" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="fc-testi-text">"The price was transparent from the start — no surprises at the end. Clean car, polite driver, smooth ride. This is how cab services should be run."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar" aria-hidden="true">K</div>
-          <div><div class="fc-testi-name">Karthik B.</div><div class="fc-testi-role">Chartered Accountant, Nungambakkam</div></div>
-        </div>
-      </article>
-
-      <!-- Duplicate set for seamless loop -->
-      <!-- Card 1 dup -->
-      <article class="fc-testi-card" aria-hidden="true">
-        <div class="fc-testi-qdeco">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0s">★★★★★</div>
-        <p class="fc-testi-text">"Absolutely punctual for my early morning flight. Driver was professional and the Innova Crysta was spotlessly clean. Will always book FIRST CAB for airport trips."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar">R</div>
-          <div><div class="fc-testi-name">Ramesh K.</div><div class="fc-testi-role">Software Engineer, Chennai</div></div>
-        </div>
-      </article>
-      <!-- Card 2 dup -->
-      <article class="fc-testi-card" aria-hidden="true">
-        <div class="fc-testi-qdeco">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0.6s">★★★★★</div>
-        <p class="fc-testi-text">"Used FIRST CAB for a Pondicherry family trip. Comfortable ride, experienced driver, no hidden charges. Best outstation cab in Chennai, hands down."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar">P</div>
-          <div><div class="fc-testi-name">Priya S.</div><div class="fc-testi-role">Teacher, Anna Nagar</div></div>
-        </div>
-      </article>
-      <!-- Card 3 dup -->
-      <article class="fc-testi-card" aria-hidden="true">
-        <div class="fc-testi-qdeco">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:1.2s">★★★★★</div>
-        <p class="fc-testi-text">"Use FIRST CAB for all corporate client pickups. Very reliable, professional drivers, vehicles always well-maintained. Highly recommended for business travel."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar">A</div>
-          <div><div class="fc-testi-name">Arvind M.</div><div class="fc-testi-role">Business Owner, T. Nagar</div></div>
-        </div>
-      </article>
-      <!-- Card 4 dup -->
-      <article class="fc-testi-card" aria-hidden="true">
-        <div class="fc-testi-qdeco">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0.3s">★★★★★</div>
-        <p class="fc-testi-text">"Booked a last-minute cab to the airport at 3 AM — they arrived in 15 minutes! Saved my flight. FIRST CAB is the most reliable service I've used in Chennai."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar">S</div>
-          <div><div class="fc-testi-name">Sundar V.</div><div class="fc-testi-role">IT Manager, OMR</div></div>
-        </div>
-      </article>
-      <!-- Card 5 dup -->
-      <article class="fc-testi-card" aria-hidden="true">
-        <div class="fc-testi-qdeco">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:0.9s">★★★★★</div>
-        <p class="fc-testi-text">"Took FIRST CAB for our Ooty trip — all 7 of us fit perfectly in the Innova. The driver knew all the mountain routes, made the whole trip stress-free and memorable."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar">M</div>
-          <div><div class="fc-testi-name">Meena R.</div><div class="fc-testi-role">Homemaker, Adyar</div></div>
-        </div>
-      </article>
-      <!-- Card 6 dup -->
-      <article class="fc-testi-card" aria-hidden="true">
-        <div class="fc-testi-qdeco">"</div>
-        <div class="fc-testi-stars" style="--twinkle-delay:1.5s">★★★★★</div>
-        <p class="fc-testi-text">"The price was transparent from the start — no surprises at the end. Clean car, polite driver, smooth ride. This is how cab services should be run."</p>
-        <div class="fc-testi-author">
-          <div class="fc-testi-avatar">K</div>
-          <div><div class="fc-testi-name">Karthik B.</div><div class="fc-testi-role">Chartered Accountant, Nungambakkam</div></div>
-        </div>
-      </article>
-
-    </div><!-- /track -->
-  </div><!-- /marquee-wrap -->
-</section>
-
-<!-- ═══════════════ CTA ═══════════════ -->
-<section class="fc-cta-sec" aria-labelledby="cta-heading">
-  <div class="container">
-    <div class="fc-cta-inner reveal">
-      <h2 id="cta-heading">Ready to <span class="grad-text">Travel Premium?</span></h2>
-      <p>Experience the best cab service in Chennai with our premium fleet and trained drivers.</p>
-      <div class="fc-cta-btns">
-        <a href="tel:+919884957791" class="btn btn-primary btn-lg" aria-label="Call FIRST CAB now">
-          <i class="fas fa-phone" aria-hidden="true"></i> Call Now
-        </a>
-        <a href="contact.html" class="btn btn-secondary btn-lg">
-          <i class="fas fa-envelope" aria-hidden="true"></i> Send Enquiry
-        </a>
-      </div>
-      <p class="fc-cta-note"><i class="fas fa-phone-alt" style="color: var(--gold); margin-right: 6px;" aria-hidden="true"></i>Available 24/7 &nbsp;·&nbsp; WhatsApp: +91 98849 57791</p>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ═══════════════ FOOTER ═══════════════ -->
-<footer class="fc-footer" role="contentinfo">
-  <div class="container">
-    <div class="fc-footer-grid">
-      <div>
-        <span class="fc-footer-logo-name">FIRST<span>CAB</span></span>
-        <p class="fc-footer-desc">Premium cab services since 2004. Safety, comfort and reliability — your journey, our priority.</p>
-        <div class="fc-socials">
-          <a href="https://wa.me/919884957791" target="_blank" rel="noopener" class="fc-social-btn" aria-label="WhatsApp FIRST CAB"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-          <a href="#" class="fc-social-btn" aria-label="FIRST CAB on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="#" class="fc-social-btn" aria-label="FIRST CAB on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="#" class="fc-social-btn" aria-label="FIRST CAB on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <div class="fc-footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Home</a></li>
-          <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About Us</a></li>
-          <li><a href="services.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Services</a></li>
-          <li><a href="contact.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact</a></li>
-        </ul>
-      </div>
-      <div class="fc-footer-col">
-        <h4>Our Services</h4>
-        <ul>
-          <li><a href="services.html#airport"><i class="fas fa-plane" aria-hidden="true"></i> Airport Transfers</a></li>
-          <li><a href="services.html#city"><i class="fas fa-car" aria-hidden="true"></i> City Rides</a></li>
-          <li><a href="services.html#outstation"><i class="fas fa-road" aria-hidden="true"></i> Outstation Trips</a></li>
-          <li><a href="services.html#packages"><i class="fas fa-clock" aria-hidden="true"></i> Hourly Packages</a></li>
-        </ul>
-      </div>
-      <div class="fc-footer-col">
-        <h4>Contact Info</h4>
-        <ul>
-          <li><a href="tel:+919884957791"><i class="fas fa-phone" aria-hidden="true"></i> +91 98849 57791</a></li>
-          <li><a href="mailto:firstcabservice@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> firstcabservice@gmail.com</a></li>
-          <li><a href="#"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Koyambedu, Chennai 600040</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="fc-footer-bottom">
-    <p>&copy; 2026 FIRST CAB. All rights reserved. Made with <i class="fas fa-heart" aria-hidden="true"></i> in Chennai.</p>
-  </div>
-</footer>
-
-<!-- ═══════════════ FLOATING ACTIONS GROUP ═══════════════ -->
-<div class="fc-floating-group">
-  <a href="tel:+919884957791" class="fc-float-call" aria-label="Call FIRST CAB">
-    <i class="fas fa-phone" aria-hidden="true"></i>
-  </a>
-  <a href="https://wa.me/919884957791" target="_blank" rel="noopener noreferrer" class="fc-float-wa" aria-label="Chat with FIRST CAB on WhatsApp">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-  </a>
-  <button class="fc-back-top" id="fc-back-top" aria-label="Back to top">
-    <i class="fas fa-chevron-up" aria-hidden="true"></i>
-  </button>
-</div>
-
-<!-- Mobile bottom bar -->
-<nav class="fc-mob-bar" aria-label="Mobile quick actions">
-  <a href="tel:+919884957791" class="fc-mob-bar-btn primary" aria-label="Call FIRST CAB">
-    <i class="fas fa-phone" aria-hidden="true"></i>Call
-  </a>
-  <a href="https://wa.me/919884957791" target="_blank" rel="noopener" class="fc-mob-bar-btn" aria-label="WhatsApp FIRST CAB">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp
-  </a>
-  <a href="services.html" class="fc-mob-bar-btn" aria-label="View services">
-    <i class="fas fa-car" aria-hidden="true"></i>Services
-  </a>
-  <a href="contact.html" class="fc-mob-bar-btn" aria-label="Contact us">
-    <i class="fas fa-envelope" aria-hidden="true"></i>Contact
-  </a>
-</nav>
-
-<script src="js/core.js" defer></script>
-<script src="js/booking.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/booking.js" defer></script>
   <script src="js/connectivity.js"></script>
 </body>
+
 </html>

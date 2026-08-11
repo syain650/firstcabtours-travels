@@ -25,29 +25,29 @@
 
   /* ─── HAMBURGER & MOBILE NAV ─── */
   function initHamburger() {
-    const btn  = $('#fc-hamburger');
+    const btn = $('#fc-hamburger');
     const menu = $('#fc-mobile-nav');
     const overlay = $('#fc-nav-overlay');
     if (!btn || !menu) return;
 
-    const open  = () => { 
-      menu.classList.add('open'); 
+    const open = () => {
+      menu.classList.add('open');
       if (overlay) overlay.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true'); 
+      btn.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden'; // prevent bg scroll
     };
-    const close = () => { 
-      menu.classList.remove('open'); 
+    const close = () => {
+      menu.classList.remove('open');
       if (overlay) overlay.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false'); 
-      document.body.style.overflow = ''; 
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     };
     const toggle = () => menu.classList.contains('open') ? close() : open();
-    
+
     btn.addEventListener('click', toggle);
     btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
     $$('a', menu).forEach(a => a.addEventListener('click', close));
-    
+
     if (overlay) overlay.addEventListener('click', close);
 
     document.addEventListener('click', e => {
@@ -83,13 +83,13 @@
       entries.forEach(entry => {
         if (!entry.isIntersecting || entry.target.dataset.done) return;
         entry.target.dataset.done = '1';
-        const target   = parseFloat(entry.target.dataset.target || '0');
-        const suffix   = entry.target.dataset.suffix || '';
-        const prefix   = entry.target.dataset.prefix || '';
-        const decimal  = target % 1 !== 0;
+        const target = parseFloat(entry.target.dataset.target || '0');
+        const suffix = entry.target.dataset.suffix || '';
+        const prefix = entry.target.dataset.prefix || '';
+        const decimal = target % 1 !== 0;
         const duration = 1800;
-        const start    = performance.now();
-        const ease     = t => 1 - Math.pow(1 - t, 3);
+        const start = performance.now();
+        const ease = t => 1 - Math.pow(1 - t, 3);
         const step = now => {
           const p = Math.min((now - start) / duration, 1);
           entry.target.textContent = prefix + (decimal ? (target * ease(p)).toFixed(1) : Math.floor(target * ease(p))) + suffix;
@@ -199,15 +199,15 @@
 
   /* ─── CHATBOT ─── */
   function initChatbot() {
-    const toggle  = $('.fc-chat-toggle');
-    const box     = $('.fc-chat-box');
-    const closeBtn= $('.fc-chat-close');
-    const msgs    = $('.fc-chat-msgs');
-    const input   = $('.fc-chat-input');
+    const toggle = $('.fc-chat-toggle');
+    const box = $('.fc-chat-box');
+    const closeBtn = $('.fc-chat-close');
+    const msgs = $('.fc-chat-msgs');
+    const input = $('.fc-chat-input');
     const sendBtn = $('.fc-chat-send');
     if (!toggle || !box) return;
 
-    const open  = () => { box.classList.add('open'); box.setAttribute('aria-hidden', 'false'); toggle.setAttribute('aria-expanded', 'true'); input?.focus(); };
+    const open = () => { box.classList.add('open'); box.setAttribute('aria-hidden', 'false'); toggle.setAttribute('aria-expanded', 'true'); input?.focus(); };
     const close = () => { box.classList.remove('open'); box.setAttribute('aria-hidden', 'true'); toggle.setAttribute('aria-expanded', 'false'); };
 
     toggle.addEventListener('click', () => box.classList.contains('open') ? close() : open());
@@ -217,9 +217,9 @@
 
     function addMsg(html, sender = 'bot') {
       if (!msgs) return;
-      const now  = new Date();
+      const now = new Date();
       const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
-      const el   = document.createElement('div');
+      const el = document.createElement('div');
       el.className = `fc-chat-msg fc-msg-${sender}`;
       el.innerHTML = `<div class="fc-msg-bubble">${html}</div><div class="fc-msg-time">${time}</div>`;
       msgs.appendChild(el);
@@ -228,14 +228,14 @@
 
     function getReply(text) {
       const m = (text || '').toLowerCase();
-      if (m.match(/airport|flight|pickup/))          return '✈️ Airport transfers available 24/7 with flight tracking. Call <strong>+91 98849 57791</strong> to book instantly.';
+      if (m.match(/airport|flight|pickup/)) return '✈️ Airport transfers available 24/7 with flight tracking. Call <strong>+91 98849 57791</strong> to book instantly.';
       if (m.match(/outstation|pondicherry|tirupati/)) return '🛣 Outstation trips to Pondicherry, Tirupati, Mahabalipuram & more. Call <strong>+91 98849 57791</strong>.';
-      if (m.match(/package|hour/))                   return '📦 4-hour and 8-hour packages for Sedan, Innova & Crysta. Call <strong>+91 98849 57791</strong> for rates.';
-      if (m.match(/price|rate|cost|fare|how much/))  return '💰 Rates depend on vehicle & distance. Call <strong>+91 98849 57791</strong> for an instant quote.';
-      if (m.match(/service|offer/))                  return '🚗 Airport Transfers, City Rides, Outstation & Hourly Packages. <a href="services.html" style="color:#F5B400">See all →</a>';
-      if (m.match(/hi|hello|hey/))                   return '👋 Hello! Ask me about our services or call <strong>+91 98849 57791</strong> — we\'re available 24/7.';
-      if (m.match(/contact|call|book/))              return '📞 Call or WhatsApp anytime: <strong>+91 98849 57791</strong> — 24/7!';
-      if (m.match(/whatsapp/))                       return '💬 WhatsApp: <a href="https://wa.me/919884957791" style="color:#F5B400;font-weight:700" target="_blank">+91 98849 57791</a>';
+      if (m.match(/package|hour/)) return '📦 4-hour and 8-hour packages for Sedan, Innova & Crysta. Call <strong>+91 98849 57791</strong> for rates.';
+      if (m.match(/price|rate|cost|fare|how much/)) return '💰 Rates depend on vehicle & distance. Call <strong>+91 98849 57791</strong> for an instant quote.';
+      if (m.match(/service|offer/)) return '🚗 Airport Transfers, City Rides, Outstation & Hourly Packages. <a href="services.html" style="color:#F5B400">See all →</a>';
+      if (m.match(/hi|hello|hey/)) return '👋 Hello! Ask me about our services or call <strong>+91 98849 57791</strong> — we\'re available 24/7.';
+      if (m.match(/contact|call|book/)) return '📞 Call or WhatsApp anytime: <strong>+91 98849 57791</strong> — 24/7!';
+      if (m.match(/whatsapp/)) return '💬 WhatsApp: <a href="https://wa.me/919884957791" style="color:#F5B400;font-weight:700" target="_blank">+91 98849 57791</a>';
       return '🙏 For the fastest help, call or WhatsApp <strong>+91 98849 57791</strong> — available 24/7.';
     }
 
@@ -260,27 +260,150 @@
 
   /* ─── CONTACT FORM ─── */
   function initContactForm() {
-    const form  = $('#fc-contact-form');
+    const form = $('#fc-contact-form');
     const msgEl = $('#fc-form-msg');
     if (!form) return;
 
+    const fields = {
+      name: $('#fc-name', form),
+      email: $('#fc-email', form),
+      phone: $('#fc-phone', form),
+      service: $('#fc-service', form),
+      message: $('#fc-message', form)
+    };
+
+    function validateField(name, val) {
+      if (name === 'name') {
+        return val.trim().length >= 2;
+      }
+      if (name === 'email') {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(val.trim());
+      }
+      if (name === 'phone') {
+        const re = /^\+?[0-9\s-]{10,15}$/;
+        return re.test(val.trim().replace(/[\s-]/g, ''));
+      }
+      if (name === 'service') {
+        return val && val !== '';
+      }
+      if (name === 'message') {
+        return val.trim().length >= 10;
+      }
+      return true;
+    }
+
+    Object.keys(fields).forEach(key => {
+      const el = fields[key];
+      if (!el) return;
+      const eventName = el.tagName === 'SELECT' ? 'change' : 'input';
+      el.addEventListener(eventName, () => {
+        if (validateField(key, el.value)) {
+          el.classList.remove('error');
+        }
+      });
+      el.addEventListener('blur', () => {
+        if (!validateField(key, el.value)) {
+          el.classList.add('error');
+        } else {
+          el.classList.remove('error');
+        }
+      });
+    });
+
     form.addEventListener('submit', async e => {
       e.preventDefault();
-      const btn      = form.querySelector('[type="submit"]');
+
+      let hasErrors = false;
+      const errorMsgs = [];
+
+      Object.keys(fields).forEach(key => {
+        const el = fields[key];
+        if (!el) return;
+        if (!validateField(key, el.value)) {
+          el.classList.add('error');
+          hasErrors = true;
+          if (key === 'name') errorMsgs.push('Please enter your full name (minimum 2 letters).');
+          if (key === 'email') errorMsgs.push('Please enter a valid email address.');
+          if (key === 'phone') errorMsgs.push('Please enter a valid 10-15 digit phone number.');
+          if (key === 'service') errorMsgs.push('Please select a service from the dropdown.');
+          if (key === 'message') errorMsgs.push('Please type a message of at least 10 characters.');
+        } else {
+          el.classList.remove('error');
+        }
+      });
+
+      if (hasErrors) {
+        if (msgEl) {
+          msgEl.className = 'fc-form-msg error';
+          msgEl.innerHTML = `<i class="fas fa-exclamation-circle"></i> Please fix the errors below:<ul style="margin: 6px 0 0 20px; padding: 0; text-align: left; font-size: 13px;">${errorMsgs.map(m => `<li>${m}</li>`).join('')}</ul>`;
+        }
+        return;
+      }
+
+      const btn = form.querySelector('[type="submit"]');
       const origHTML = btn.innerHTML;
-      btn.innerHTML  = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-      btn.disabled   = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+      btn.disabled = true;
+
+      const data = {
+        name: fields.name.value.trim(),
+        email: fields.email.value.trim(),
+        phone: fields.phone.value.trim(),
+        service: fields.service.value,
+        message: fields.message.value.trim(),
+        _subject: form.querySelector('[name="_subject"]')?.value || 'New Inquiry',
+        _gotcha: form.querySelector('[name="_gotcha"]')?.value || ''
+      };
+
       try {
-        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        });
         if (res.ok) {
-          if (msgEl) { msgEl.className = 'fc-form-msg success'; msgEl.innerHTML = '<i class="fas fa-check-circle"></i> Message sent! We\'ll be in touch shortly.'; }
+          if (msgEl) {
+            msgEl.className = 'fc-form-msg success';
+            msgEl.innerHTML = '<i class="fas fa-check-circle"></i> Message sent! We\'ll be in touch shortly.';
+          }
           form.reset();
-        } else { throw new Error(); }
-      } catch {
-        if (msgEl) { msgEl.className = 'fc-form-msg error'; msgEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Something went wrong — please call +91 98849 57791.'; }
+        } else {
+          const resData = await res.json().catch(() => ({}));
+          throw new Error(resData.error || (resData.errors ? resData.errors.map(e => e.message).join(', ') : '') || 'Formspree submission rejected');
+        }
+      } catch (err) {
+        console.warn('Formspree submit issue:', err);
+        // Fallback to self-closing background popup window if AJAX fetch fails (e.g. CORS block under file://)
+        if (err.message === 'Failed to fetch' || err.name === 'TypeError') {
+          // Open a small, off-screen, auto-closing window to handle browser file-origin targets without blocks
+          const popup = window.open('about:blank', 'formspree_popup', 'width=100,height=100,left=10000,top=10000');
+          form.target = 'formspree_popup';
+          form.submit();
+
+          if (msgEl) {
+            msgEl.className = 'fc-form-msg success';
+            msgEl.innerHTML = '<i class="fas fa-check-circle"></i> Message sent! We\'ll be in touch shortly.';
+          }
+
+          // Let the browser serialize data, reset the fields, close the popup and revert form target
+          setTimeout(() => {
+            if (popup) popup.close();
+            form.reset();
+            form.target = '';
+          }, 1500);
+          return;
+        }
+        if (msgEl) {
+          msgEl.className = 'fc-form-msg error';
+          msgEl.innerHTML = `<i class="fas fa-exclamation-circle"></i> Submission failed: ${err.message || 'please call +91 98849 57791'}.`;
+        }
       } finally {
         btn.innerHTML = origHTML;
-        btn.disabled  = false;
+        btn.disabled = false;
       }
     });
   }
@@ -317,10 +440,10 @@
 
     // Inject cursor elements
     const outer = document.createElement('div');
-    const dot   = document.createElement('div');
+    const dot = document.createElement('div');
     const slash = document.createElement('div');
     outer.className = 'fc-cursor-outer';
-    dot.className   = 'fc-cursor-dot';
+    dot.className = 'fc-cursor-dot';
     slash.className = 'fc-cursor-slash';
     slash.textContent = '/';
     document.body.append(outer, dot, slash);
@@ -334,9 +457,9 @@
       mouseX = e.clientX;
       mouseY = e.clientY;
       dot.style.left = mouseX + 'px';
-      dot.style.top  = mouseY + 'px';
+      dot.style.top = mouseY + 'px';
       slash.style.left = mouseX + 'px';
-      slash.style.top  = mouseY + 'px';
+      slash.style.top = mouseY + 'px';
     });
 
     // Outer ring lags with lerp for magnetic feel
@@ -345,7 +468,7 @@
       outerX = lerp(outerX, mouseX, 0.14);
       outerY = lerp(outerY, mouseY, 0.14);
       outer.style.left = outerX + 'px';
-      outer.style.top  = outerY + 'px';
+      outer.style.top = outerY + 'px';
       raf = requestAnimationFrame(animateOuter);
     }
     animateOuter();
@@ -385,7 +508,7 @@
 
   /* ─── JOURNEY–VEHICLE TAB FILTER ─── */
   function initJourneyTabs() {
-    const tabs  = $$('.fc-journey-tab');
+    const tabs = $$('.fc-journey-tab');
     const cards = $$('.fc-fleet-card[data-journeys]');
     if (!tabs.length || !cards.length) return;
 
@@ -422,6 +545,30 @@
     });
   }
 
+  /* ─── CONTACT PAGE MAP ─── */
+  function initContactPageMap() {
+    const mapOffline = $('#mapOffline');
+    const mapSkeleton = $('#mapSkeleton');
+    const mapFrame = $('#mapFrame');
+    if (!mapFrame) return;
+
+    // Direct active map override
+    if (mapOffline) mapOffline.style.display = 'none';
+    mapFrame.style.display = 'block';
+    if (mapSkeleton) {
+      mapSkeleton.style.display = 'block';
+      mapSkeleton.style.opacity = '1';
+    }
+
+    mapFrame.addEventListener('load', () => {
+      mapFrame.style.opacity = '1';
+      if (mapSkeleton) {
+        mapSkeleton.style.opacity = '0';
+        setTimeout(() => { mapSkeleton.style.display = 'none'; }, 300);
+      }
+    });
+  }
+
   /* ─── INIT ─── */
   document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
@@ -435,6 +582,7 @@
     initChatbot();
     initFloatingGroup();
     initContactForm();
+    initContactPageMap();
     initTestimonialSlider();
     initPremiumCursor();
     initJourneyTabs();
@@ -444,22 +592,22 @@
 
   /* ─── FLEET CAROUSEL ─── */
   function initFleetCarousel() {
-    const carousel   = $('#fc-carousel');
-    const track      = $('#fc-carousel-track');
-    const slides     = track ? [...track.querySelectorAll('.fc-carousel-slide')] : [];
-    const dots       = $$('.fc-carousel-dot');
-    const prevBtn    = $('#fc-carousel-prev');
-    const nextBtn    = $('#fc-carousel-next');
+    const carousel = $('#fc-carousel');
+    const track = $('#fc-carousel-track');
+    const slides = track ? [...track.querySelectorAll('.fc-carousel-slide')] : [];
+    const dots = $$('.fc-carousel-dot');
+    const prevBtn = $('#fc-carousel-prev');
+    const nextBtn = $('#fc-carousel-next');
 
     if (!carousel || !track || slides.length === 0) return;
 
-    let current     = 0;
-    let autoTimer   = null;
-    let isPaused    = false;
-    let isDesktop   = window.matchMedia('(min-width: 1024px)').matches;
-    let perView     = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
-    let total       = slides.length;
-    let maxIndex    = Math.max(0, total - perView);
+    let current = 0;
+    let autoTimer = null;
+    let isPaused = false;
+    let isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+    let perView = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
+    let total = slides.length;
+    let maxIndex = Math.max(0, total - perView);
 
     // ── Helpers ──
     function getSlideWidth() {
@@ -468,7 +616,7 @@
 
     function goTo(index, animate = true) {
       if (!animate) track.style.transition = 'none';
-      else          track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      else track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
 
       current = Math.max(0, Math.min(index, maxIndex));
       track.style.transform = `translateX(-${current * getSlideWidth()}px)`;
@@ -521,8 +669,8 @@
 
     function onDragStart(e) {
       isDragging = true;
-      startX     = getEventX(e);
-      startY     = getEventY(e);
+      startX = getEventX(e);
+      startY = getEventY(e);
       startTranslate = current * getSlideWidth();
       track.classList.add('dragging');
       stopAuto();
@@ -552,21 +700,21 @@
     }
 
     // Touch events
-    track.addEventListener('touchstart',  onDragStart, { passive: true });
-    track.addEventListener('touchmove',   onDragMove,  { passive: false });
-    track.addEventListener('touchend',    onDragEnd);
+    track.addEventListener('touchstart', onDragStart, { passive: true });
+    track.addEventListener('touchmove', onDragMove, { passive: false });
+    track.addEventListener('touchend', onDragEnd);
     track.addEventListener('touchcancel', onDragEnd);
 
     // Mouse drag events
-    track.addEventListener('mousedown',  onDragStart);
+    track.addEventListener('mousedown', onDragStart);
     window.addEventListener('mousemove', onDragMove);
-    window.addEventListener('mouseup',   onDragEnd);
+    window.addEventListener('mouseup', onDragEnd);
 
     // ── Responsive recalculate ──
     window.addEventListener('resize', () => {
       isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-      perView   = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
-      maxIndex  = Math.max(0, total - perView);
+      perView = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
+      maxIndex = Math.max(0, total - perView);
       goTo(Math.min(current, maxIndex), false);
       stopAuto();
       startAuto();
@@ -574,7 +722,7 @@
 
     // ── Keyboard accessibility ──
     carousel.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft')  { prev(); startAuto(); }
+      if (e.key === 'ArrowLeft') { prev(); startAuto(); }
       if (e.key === 'ArrowRight') { next(); startAuto(); }
     });
 
@@ -584,9 +732,9 @@
         const journey = tab.dataset.journey;
         slides.forEach((slide, i) => {
           const journeys = slide.dataset.journeys || 'all';
-          const matches  = journey === 'all' || journeys.includes(journey);
-          slide.style.opacity  = matches ? '1' : '0.3';
-          slide.style.filter   = matches ? 'none' : 'grayscale(0.5)';
+          const matches = journey === 'all' || journeys.includes(journey);
+          slide.style.opacity = matches ? '1' : '0.3';
+          slide.style.filter = matches ? 'none' : 'grayscale(0.5)';
           slide.style.transform = matches ? '' : 'scale(0.97)';
         });
         // Snap to first matching slide
@@ -607,13 +755,13 @@
   /* ─── PREMIUM SERVICES CAROUSEL ─── */
   function initPremiumServicesCarousel() {
     makeCarousel({
-      carouselId : 'fc-ps-carousel',
-      trackId    : 'fc-ps-track',
-      dotsId     : 'fc-ps-dots',
-      prevId     : 'fc-ps-prev',
-      nextId     : 'fc-ps-next',
-      slideClass : 'fc-ps-slide',
-      interval   : 2800,
+      carouselId: 'fc-ps-carousel',
+      trackId: 'fc-ps-track',
+      dotsId: 'fc-ps-dots',
+      prevId: 'fc-ps-prev',
+      nextId: 'fc-ps-next',
+      slideClass: 'fc-ps-slide',
+      interval: 2800,
     });
   }
 
@@ -624,20 +772,20 @@
    */
   function makeCarousel(opts) {
     const carousel = document.getElementById(opts.carouselId);
-    const track    = document.getElementById(opts.trackId);
-    const slides   = track ? [...track.querySelectorAll('.' + opts.slideClass)] : [];
-    const dots     = document.querySelectorAll(`#${opts.dotsId} .fc-carousel-dot`);
-    const prevBtn  = document.getElementById(opts.prevId);
-    const nextBtn  = document.getElementById(opts.nextId);
+    const track = document.getElementById(opts.trackId);
+    const slides = track ? [...track.querySelectorAll('.' + opts.slideClass)] : [];
+    const dots = document.querySelectorAll(`#${opts.dotsId} .fc-carousel-dot`);
+    const prevBtn = document.getElementById(opts.prevId);
+    const nextBtn = document.getElementById(opts.nextId);
 
     if (!carousel || !track || slides.length === 0) return;
 
-    let current   = 0;
+    let current = 0;
     let autoTimer = null;
-    let isPaused  = false;
+    let isPaused = false;
     let isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-    let perView   = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
-    let maxIndex  = Math.max(0, slides.length - perView);
+    let perView = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
+    let maxIndex = Math.max(0, slides.length - perView);
 
     function getSlideWidth() {
       return slides[0] ? slides[0].getBoundingClientRect().width : 0;
@@ -669,7 +817,7 @@
     function stopAuto() { clearInterval(autoTimer); }
 
     // Hover pause
-    carousel.addEventListener('mouseenter', () => { isPaused = true;  stopAuto(); });
+    carousel.addEventListener('mouseenter', () => { isPaused = true; stopAuto(); });
     carousel.addEventListener('mouseleave', () => { isPaused = false; startAuto(); });
 
     // Arrows
@@ -691,11 +839,11 @@
     function getY(e) { return e.touches ? e.touches[0].clientY : e.clientY; }
 
     function onStart(e) {
-      dragging   = true;
-      startX     = getX(e);
-      startY     = getY(e);
-      startT     = current * getSlideWidth();
-      deltaX     = 0;
+      dragging = true;
+      startX = getX(e);
+      startY = getY(e);
+      startT = current * getSlideWidth();
+      deltaX = 0;
       track.classList.add('dragging');
       stopAuto();
     }
@@ -721,26 +869,26 @@
       startAuto();
     }
 
-    track.addEventListener('touchstart',  onStart, { passive: true });
-    track.addEventListener('touchmove',   onMove,  { passive: false });
-    track.addEventListener('touchend',    onEnd);
+    track.addEventListener('touchstart', onStart, { passive: true });
+    track.addEventListener('touchmove', onMove, { passive: false });
+    track.addEventListener('touchend', onEnd);
     track.addEventListener('touchcancel', onEnd);
-    track.addEventListener('mousedown',   onStart);
-    window.addEventListener('mousemove',  onMove);
-    window.addEventListener('mouseup',    onEnd);
+    track.addEventListener('mousedown', onStart);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onEnd);
 
     // Responsive
     window.addEventListener('resize', () => {
       isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-      perView   = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
-      maxIndex  = Math.max(0, slides.length - perView);
+      perView = isDesktop ? 3 : (window.matchMedia('(min-width: 640px)').matches ? 2 : 1);
+      maxIndex = Math.max(0, slides.length - perView);
       goTo(Math.min(current, maxIndex), false);
     });
 
     // Keyboard
     carousel.setAttribute('tabindex', '0');
     carousel.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft')  { prev(); startAuto(); }
+      if (e.key === 'ArrowLeft') { prev(); startAuto(); }
       if (e.key === 'ArrowRight') { next(); startAuto(); }
     });
 
