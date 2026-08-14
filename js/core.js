@@ -8,6 +8,28 @@
 
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+  /* ─── PAGE LOADER DISMISS ─── */
+  (function initPageLoader() {
+    const loader = document.getElementById('fc-page-loader');
+    if (!loader) return;
+    const minMs = 380;
+    const t0 = performance.now();
+    function hide() {
+      const wait = Math.max(0, minMs - (performance.now() - t0));
+      setTimeout(() => {
+        loader.classList.add('fc-loader-hidden');
+        setTimeout(() => loader.remove(), 500);
+      }, wait);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', hide);
+    } else {
+      hide();
+    }
+  }());
+
+
   const isTouch = () => window.matchMedia('(pointer: coarse)').matches;
 
   /* ─── NAVBAR ─── */
