@@ -130,5 +130,5 @@ function parseAndDefilterPng(filename) {
     }
 }
 
-parseAndDefilterPng('firstcab-logo-new.png');
-parseAndDefilterPng('primary_logo_transparent.png');
+parseAndDefilterPng('assets/images/primary-logo-transparent.png');
+parseAndDefilterPng('assets/images/primary-logo-transparent.png');
